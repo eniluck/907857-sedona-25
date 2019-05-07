@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Андрей Федерягин](https://up.htmlacademy.ru/htmlcss/25/user/907857).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Островский](https://htmlacademy.ru/profile/grandmaus).
 
 ---
 
