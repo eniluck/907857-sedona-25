@@ -6,17 +6,19 @@
   </head>
   <body>
     <header class="site-header">
-      <nav class="site-navigation">
+      <nav class="main-navigation">
         <!-- Подумать какой текст-->
         <!-- Размер и название картинки взял из файла-->
-        <!-- оборачивать ли в тег "a" без ссылки ? -->
-        <img 
-          src="logo.svg"  
+        <!-- Q:оборачивать ли в тег "a" без ссылки ? A:да оборачивать по тз. п.3.14 Логотип — это ссылка на главную страницу.-->
+        <a>
+          <img 
+          src="img/logo.svg"  
           alt="city of sedona"
           width="138"
           height="70">  
-        <!--Какой подобрать класс для списка навигации?-->
-        <ul>
+        </a>
+        <!--Q:Какой подобрать класс для списка навигации? A: Для nav: main-navigation, для ul site-navigation-->
+        <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="foto-video.html">Фото и видео</a></li>
           <li><a href="state-map.html">Карта штата</a></li>
@@ -26,13 +28,38 @@
     </header>
     <main class="container">
       <h1>Седона — небольшой городок в Аризоне,<br>
-          заслуживающий большего!</h1>
+          заслуживающий большего!
+      </h1>
+      <section class="intro">
+        <h2 class="visually-hidden">Добро пожаловать в Седона!</h2>
+        <img src="img/welcome.svg" 
+          alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks."
+          width="458"
+          height="352">
+      </section>
+      <section class="advantages">
+          <h2 class="visually-hidden">Преимущества</h2>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+          <!-- Список приимуществ будет размечен в следующем задании-->
+      </section>
+      <section class="">
+        <h2>Заинтересовались?</h2>
+        <p>
+          Укажите предполагаемые даты поездки, <br>
+          и мы покажем вам лучшие предложения гостиниц в седоне
+        </p>
+        <a class="button" href="">Поиск гостиницы в Седоне</a>
+      </section>
+      <section class="map">
+        <h2 class="visually-hidden">Карта проезда</h2>
+        <!--Карта будет размечена в следующих заданиях-->
+      </section>
     </main>
     <footer class="site-footer">
       <p class="footer-hashtag">
         #visitsedona
       </p>
-      <ul class="footer-social-buttons">
+      <ul class="footer-social">
         <li>
           <a href="#">twitter</a>
         </li>
@@ -43,14 +70,21 @@
           <a href="#">youtube</a>
         </li>
       </ul>
-      <p class="footer-owner">
+      <p class="footer-copyright">
         website by
-        <img 
-          src="" 
+        <a href="https://htmlacademy.ru/intensive/htmlcss">
+         <img 
+          src="img/logo-name.svg" 
           alt="HtmlAcademy"
-          width=""
-          height="">
+          width="113"
+          height="39">
+        </a>
       </p>
     </footer>
+
+    <section class="search">
+      <h2 class="visually-hidden">Поиск гостинницы в Седоне</h2>
+      <!-- Форма поиска будет размечена в следующих заданиях-->
+    </section>
   </body>
 </html>
