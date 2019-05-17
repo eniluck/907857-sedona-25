@@ -36,7 +36,6 @@
       </h1>
       <section class="intro">
         <h2 class="visually-hidden">Добро пожаловать в Седона!</h2>
-        <!-- -->
         <img src="img/intro-welcome.svg" 
           alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks."
           width="458"
@@ -46,16 +45,17 @@
         <h2 class="visually-hidden">Преимущества</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         <ol class="advantage-list">
-          <li class="advantage-item"> <!-- Обернуть содержимое в section или div-->
-            <!--<p class="advantage-item-number">— №1 —</p>  В дальнейшем будет реализовано в виде псевдоэлементов и счетчиком в css -->
-            <h3>
-                Настоящий городок
-            </h3>
-            <p class="advantage-item-info">
-              Седона — не аттракцион для туристов,<br> 
-              там течёт своя жизнь
-            </p>
-            
+          <li class="advantage-item"> 
+            <section class="advantage-item-description">
+              <!--<p class="advantage-item-number">— №1 —</p>  В дальнейшем будет реализовано в виде псевдоэлементов и счетчиком в css -->
+              <h3>
+                  Настоящий городок
+              </h3>
+              <p class="advantage-item-info">
+                Седона — не аттракцион для туристов,<br> 
+                там течёт своя жизнь
+              </p>
+            </section>
             <img src="img/real-city.jpg" alt="Настоящий город" width="800" height="256">
             <ul class="city-advantage-list">
               <li class="city-advantage-item">
@@ -71,48 +71,55 @@
                   <p>Не только китайского, но и местного производства!</p>
               </li>
             </ul>
-
           </li>
           <li class="advantage-item">
             <img src="img/devils-bridge.jpg" alt="Мост дьявола" width="800" height="256">
-            <!--<p class="advantage-number">— №2 —</p>-->
-            <h3>
-              Там есть Мост дьявола
-            </h3>
-            <p class="advantage-item-info">
-              Да, по нему можно пройти!
-              Если конечно вы осмелитесь
-            </p>
+            <section class="advantage-item-description">
+              <!--<p class="advantage-number">— №2 —</p>-->
+              <h3>
+               Там есть Мост дьявола
+              </h3>
+              <p class="advantage-item-info">
+                Да, по нему можно пройти!
+                Если конечно вы осмелитесь
+              </p>
+            </section>
           </li>
           <li class="advantage-item">
-            <!-- <p class="advantage-number">— №3 —</p> -->
-            <h3>
-              Небольшая площадь
-            </h3>
-            <p class="advantage-item-info">
-              Все достопримечательности
-              находятся очень близко
-            </p>
+            <section class="advantage-item-description">
+              <!-- <p class="advantage-number">— №3 —</p> -->
+              <h3>
+                Небольшая площадь
+              </h3>
+              <p class="advantage-item-info">
+                Все достопримечательности
+                находятся очень близко
+              </p>
+            </section>
           </li>
           <li class="advantage-item">
-            <!-- <p class="advantage-number">— №4 —</p> -->
-            <h3>
-              Красивая дорога
-            </h3>
-            <p class="advantage-item-info">
-              Ехать в Седону из Лас-Вегаса совсем
-              не скучно!
-            </p>
+            <section class="advantage-item-description">
+              <!-- <p class="advantage-number">— №4 —</p> -->
+              <h3>
+                Красивая дорога
+              </h3>
+              <p class="advantage-item-info">
+                Ехать в Седону из Лас-Вегаса совсем
+                не скучно!
+              </p>
+            </section>
           </li>
           <li class="advantage-item">
-            <!-- <p class="advantage-number">— №5 —</p> -->
-            <h3>
-              Мало туристов
-            </h3>
-            <p class="advantage-item-info">   
-              Большинство едет в гранд каньон
-              и толпится там
-            </p>
+            <section class="advantage-item-description">
+              <!-- <p class="advantage-number">— №5 —</p> -->
+              <h3>
+                Мало туристов
+              </h3>
+              <p class="advantage-item-info">   
+                Большинство едет в гранд каньон
+                и толпится там
+              </p>
+            </section>
           </li>
         </ol>
       </section>
