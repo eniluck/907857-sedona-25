@@ -135,6 +135,7 @@
       <section class="map">
         <h2 class="visually-hidden">Карта проезда</h2>
         <!--Карта будет размечена в следующих заданиях-->
+        <img src="img/map.jpg" alt="Соединенные Штаты Америки, штат Аризона, город Седона" width="1200" height="594">
       </section>
     </main>
     <footer class="site-footer">
@@ -166,7 +167,33 @@
 
     <section class="hotel-search">
       <h2 class="visually-hidden">Поиск гостинницы в Седоне</h2>
-      <!-- Форма поиска будет размечена в следующих заданиях-->
+      <form class="hotel-search-form"
+        action="https://echo.htmlacademy.ru"
+        method="POST">
+        <p class="hotel-search-item">
+          <label for="arrival-date">Дата заезда</label>
+          <input type="text" id="arrival-date" name="arrival-date" value="" placeholder="24 апреля 2017">
+          <button class="button hotel-search-button-calendar" type="button">Календарь</button>
+        </p>
+        <p class="hotel-search-item">
+          <label for="departure-date">Дата выезда</label>
+          <input type="text" id="departure-date" name="departure-date" value="" placeholder="4 июля 2017">
+          <button class="button hotel-search-button-calendar" type="button">Календарь</button>
+        </p>
+        <p class="hotel-search-item">
+          <label for="adults-count">Взрослые</label>
+          <button class="button hotel-search-button-minus" type="button">-</button>
+          <input type="number" id="adults-count" name="adults-count" min="1" max="10" value="2">
+          <button class="button hotel-search-button-plus" type="button">+</button>
+        </p>
+        <p class="hotel-search-item">
+          <label for="adults-count">Дети</label>
+          <button class="button hotel-search-button-minus" type="button">-</button>
+          <input type="number" id="children-count" name="children-count" min="1" max="10" value="2">
+          <button class="button hotel-search-button-plus" type="button">+</button>
+        </p>
+        <button class="button hotel-search-button-find" type="submit">Найти</button>
+      </form>
     </section>
   </body>
 </html>
