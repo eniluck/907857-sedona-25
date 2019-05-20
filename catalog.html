@@ -35,6 +35,57 @@
         <section class="search">
             <h2 class="visually-hidden">Форма поиска</h2>
             <!-- форма поиска будет размечена в следующем задании-->
+            <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
+              <fieldset>
+                <legend>Инфраструктура:</legend>
+                <ul>
+                  <lu class="search-option">
+                    <input class="visually-hidden search-input search-input-checkbox" type="checkbox" name="search-pool" id="search-pool" checked>
+                    <label for="search-pool">Бассейн</label>
+                  </lu>
+                  <lu class="search-option">
+                    <input class="visually-hidden search-input search-input-checkbox" type="checkbox" name="search-parking" id="search-parking">
+                    <label for="search-parking">Парковка</label>
+                    
+                  </lu>
+                  <lu class="search-option">
+                    <input class="visually-hidden search-input search-input-checkbox" type="checkbox" name="search-wifi" id="search-wifi">
+                    <label for="search-wifi">Wi-Fi</label>
+                  </lu>
+                </ul>
+              </fieldset>
+              <fieldset>
+                <legend>Тип жилья:</legend>
+                <ul>
+                  <lu class="search-option">
+                    <input class="visually-hidden search-input search-input-checkbox" type="checkbox" name="search-hotel" id="search-hotel" checked>
+                    <label for="search-hotel">Гостиница</label>
+                  </lu>
+                  <lu class="search-option">
+                    <input class="visually-hidden search-input search-input-checkbox" type="checkbox" name="search-motel" id="search-motel" checked>
+                    <label for="search-motel">Мотель</label>                    
+                  </lu>
+                  <lu class="search-option">
+                    <input class="visually-hidden search-input search-input-checkbox" type="checkbox" name="search-apartments" id="search-apartments" checked>
+                    <label for="search-apartments">Апартаменты</label>                        
+                  </lu>
+                </ul>
+              </fieldset>
+              <fieldset>
+                <legend>Стоимость в сутки (Р):</legend>
+                <label class="visually-hidden" for="search-price-from">
+                  Стоимость от:
+                </label>
+                <input class="search-input search-input-number" type="number" id="search-price-from" name="search-price-from" value="" min="0" max="3000" placeholder="ОТ 0">
+                <label class="visually-hidden" for="search-price-to">
+                  Стоимость до:
+                </label>
+                <input class="search-input search-input-number" type="number" id="search-price-to" name="search-price-to" value="" min="0" max="3000" placeholder="ДО 3000">   
+              </fieldset>
+              <button type="submit" class="button search-button">
+                Показать
+              </button>
+            </form>
         </section>
         <section class="result-sort">
             <h2 class="visually-hidden">Форма сортировки результата поиска</h2>
@@ -129,7 +180,7 @@
                 <img src="img/villas-at-poco-diablo.jpg" alt="фото Villas at Poco Diablo"> 
                 <p class="appartment-info">
                     <span class="appartment-type">
-                        Аппартаменты
+                        Апартаменты
                     </span>
                     <span class="appartment-price">
                         От 2000 Р.
