@@ -9,14 +9,25 @@ body {
     color: #000;
     text-transform: uppercase;
 
-    background-color: #fff;
+    background-color: #f1f1f1;
 }
 
 a{
     text-decoration: none;
 }
 
+.site-header,
+.container{
+    background-color: #fff;
+}
+
+.site-footer{
+    background-color: rgba(255,255,255,0.9);
+}
+
 /*Navigation*/
+
+
 .site-navigation{
     list-style: none;
 }
@@ -42,12 +53,13 @@ h1 {
 
 /*Main > intro*/
 .intro{
-    
-    background-color: #fff;
-    /*добавить декоративный фон с низу*/
-    background-image: url("../img/intro-background.jpg");
-    background-repeat: no-repeat;
-    background-position: top center;
+    background-color: #38484d;
+    background-image: 
+        url("../img/intro-polygon.svg"),
+        url("../img/intro-background.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom center,top center;
+    /*min-height: 509px;    */
 
     text-align: center;
 }
@@ -64,6 +76,11 @@ h1 {
 
 .advantage-item-description{
     text-align: center;
+    background-color: #81b3d2;
+}
+
+.advantage-item:nth-of-type(n+3) .advantage-item-description{
+    background-color: #eeeeee;
 }
 
 .advantage-item-description h3{
@@ -106,6 +123,8 @@ h1 {
 
 .button-search{
     font-size: 21px;
+    color: #fff;
+    background-color: #766357;
 }
 
 /*Footer*/
@@ -119,9 +138,28 @@ h1 {
 
 
 /*hotel-search*/
+.hotel-search{
+background-color: #fff; 
+}
+
+.button {
+    font: inherit; /*Наследует от родительского элемента или от body?*/
+
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
 .hotel-search-item input[type="text"],
 .hotel-search-item input[type="number"],
 .hotel-search-button-find {
     font: inherit;
     text-transform: uppercase;
+    background-color: #f2f2f2;
+}
+
+.hotel-search-button-find{
+    color: #fff;
+    background-color: #81b3d2;
+
 }
