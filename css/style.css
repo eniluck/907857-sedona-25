@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+
+    background-color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*Navigation*/
+.site-navigation{
+    list-style: none;
+}
+
+.site-navigation a{
+    color: #000;
+}
+
+.site-navigation a:hover{
+    color: #81b3d2;
+}
+
+.site-navigation a:active{
+    color: rgba(0,0,0,0.3);
+}
+
+
+/*Main content*/
+h1 {
+    text-align: center;
+    font-size: 21px;
+}
+
+/*Main > intro*/
+.intro{
+    
+    background-color: #fff;
+    /*добавить декоративный фон с низу*/
+    background-image: url("../img/intro-background.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    text-align: center;
+}
+
+/*Main > advantages*/
+.advantage-list-caption{
+    text-align: center;
+    font-weight: 400;
+}
+
+.advantage-list{
+    list-style: none;
+}
+
+.advantage-item-description{
+    text-align: center;
+}
+
+.advantage-item-description h3{
+    font-size: 21px;
+}
+
+.advantage-item-description p{
+    font-weight: 400;
+}
+
+.city-advantage-list{
+    list-style: none;
+}
+
+.city-advantage-item{
+    text-align: center;
+}
+
+.city-advantage-item h4{
+    font-size: 21px;
+}
+
+.city-advantage-item p{
+    font-weight: 400;
+}    
+
+/*Main > search*/
+.search{
+    text-align: center;
+}
+
+.got-interested{
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.search p{
+    font-weight: 400;
+}
+
+.button-search{
+    font-size: 21px;
+}
+
+/*Footer*/
+.footer-hashtag{
+    font-size: 21px;
+}
+
+.footer-social-list{
+    list-style: none;
+}
+
+
+/*hotel-search*/
+.hotel-search-item input[type="text"],
+.hotel-search-item input[type="number"],
+.hotel-search-button-find {
+    font: inherit;
+    text-transform: uppercase;
+}
