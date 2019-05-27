@@ -229,3 +229,28 @@ h1 {
     color: #766357;
 }
 
+.appartment-item h3{
+    font-size: 21px;
+}
+
+.appartment-type,
+.appartment-price{
+    font-size: 14px;
+    line-height: 21px;
+    color: #333333;
+}
+
+.button-detail{
+    color: #fff;
+    background-color: #81b3d2;
+}
+
+.button-booking{
+    color: #fff;
+    background-color: #766357;
+}
+
+.rating-digit{
+    color: #666;
+    background-color: #f2f2f2;
+}
