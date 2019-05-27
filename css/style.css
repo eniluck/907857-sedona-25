@@ -147,6 +147,15 @@ h1 {
     background-color: #766357;
 }
 
+.button-search:hover{
+    background-color: #604e43;
+}
+
+.button-search:active{
+    color: rgba(0,0,0,0.3);
+    background-color: #503e33;
+}
+
 /*Footer*/
 .footer-hashtag{
     font-size: 21px;
@@ -156,7 +165,7 @@ h1 {
     list-style: none;
 }
 
-/* цвет для иконоки*/
+/* цвет для иконоки */
 .logo-name path {
     fill: #231f20;
 }
@@ -167,6 +176,7 @@ h1 {
     background-color: #fff; 
 }
 
+
 .button {
     font: inherit; /*Наследует от родительского элемента или от body?*/
 
@@ -176,17 +186,42 @@ h1 {
 }
 
 .hotel-search-item input[type="text"],
-.hotel-search-item input[type="number"],
-.hotel-search-button-find {
+.hotel-search-item input[type="number"]{
     font: inherit;
     text-transform: uppercase;
     background-color: #f2f2f2;
+    /*
+        какой указать у этого элемента border? 
+        если его совсем убрать будет "скакать" при фокусе
+    */
+    border: 2px solid transparent; 
+}
+
+.hotel-search-item input[type="text"]:hover,
+.hotel-search-item input[type="number"]:hover{
+    background-color: #ebebeb;
+}
+
+.hotel-search-item input[type="text"]:focus,
+.hotel-search-item input[type="number"]:focus{
+    background-color: #fff;
+    border: 2px solid #e5e5e5;
 }
 
 .hotel-search-button-find{
+    font: inherit;
+    text-transform: uppercase;
     color: #fff;
     background-color: #81b3d2;
+}
 
+.hotel-search-button-find:hover{
+    background-color: #669ec0;
+}
+
+.hotel-search-button-find:active{
+    color: rgba(0,0,0,0.3);
+    background-color: #5496bd;
 }
 
 /*Внутрення страница*/
