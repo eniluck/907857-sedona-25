@@ -16,6 +16,25 @@ a{
     text-decoration: none;
 }
 
+h1 {
+    text-align: center;
+    font-size: 21px;
+}
+
+
+/*На данном этапе уже должен быть указан?*/
+.visually-hidden{
+
+}
+
+.background-container{
+    background-color: #fff;
+    width: 1200px;  /*размер сайта*/
+    margin: 0 auto; /*центровка*/
+    box-shadow: 0px 5px 15px 0px rgba(0,1,1,0.2); /*правильно ли снята информация по тени?*/
+}
+
+
 .site-header,
 .container{
     background-color: #fff;
@@ -46,10 +65,7 @@ a{
 
 
 /*Main content*/
-h1 {
-    text-align: center;
-    font-size: 21px;
-}
+
 
 /*Main > intro*/
 .intro{
@@ -66,6 +82,7 @@ h1 {
 
 /*Main > advantages*/
 .advantage-list-caption{
+    color: #333;
     text-align: center;
     font-weight: 400;
 }
@@ -75,11 +92,13 @@ h1 {
 }
 
 .advantage-item-description{
+    color: #fff;
     text-align: center;
     background-color: #81b3d2;
 }
 
 .advantage-item:nth-of-type(n+3) .advantage-item-description{
+    color: #000;
     background-color: #eeeeee;
 }
 
@@ -118,10 +137,11 @@ h1 {
 }
 
 .search p{
+    color: #333;
     font-weight: 400;
 }
 
-.button-search{
+.button.button-search{
     font-size: 21px;
     color: #fff;
     background-color: #766357;
@@ -136,10 +156,15 @@ h1 {
     list-style: none;
 }
 
+/* цвет для иконоки*/
+.logo-name path {
+    fill: #231f20;
+}
+
 
 /*hotel-search*/
 .hotel-search{
-background-color: #fff; 
+    background-color: #fff; 
 }
 
 .button {
@@ -168,3 +193,4 @@ background-color: #fff;
 .site-navigation-current a{
     color: #766357;
 }
+
