@@ -163,3 +163,8 @@ background-color: #fff;
     background-color: #81b3d2;
 
 }
+
+/*Внутрення страница*/
+.site-navigation-current a{
+    color: #766357;
+}
