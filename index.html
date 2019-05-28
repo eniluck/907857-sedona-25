@@ -8,7 +8,6 @@
     <link href="css/style.css" rel="stylesheet">    
   </head>
   <body>
-    <!-- Правильно ли было добавить общий тег контейнер div для стилизации тени и заливки белого цвета? -->
     <div class="background-container">
       <header class="site-header">
         <nav class="main-navigation">
@@ -161,11 +160,6 @@
         <p class="footer-copyright">
           Website by
           <a href="https://htmlacademy.ru/intensive/htmlcss">
-            <!--
-              Только таким образом можно стилизовать svg? 
-              Inline блоком и прописать в свойстве fill цвет с помощью CSS. 
-              Или можно в файле с картинкой внести правки? 
-            -->
             <svg class="logo-name" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 113 39" width="113" height="39">
               <title>Логотип HtmlAcademy</title>
               <path d="M401.93,351.51a2.07,2.07,0,0,0,.58-0.11v1.4a3.41,3.41,0,0,1-1.24.22,1.75,1.75,0,0,1-1.75-1,5.08,5.08,0,0,1-3.3,1.13c-1.59,0-3.06-.87-3.06-2.68,0-2.24,2.08-2.93,3.9-2.93a11.63,11.63,0,0,1,2.28.26v-0.31c0-1.09-.8-1.86-2.3-1.86a7.79,7.79,0,0,0-3.15.67v-1.79a10.72,10.72,0,0,1,3.35-.58c2.48,0,4,1.18,4,3.83v3.14A0.57,0.57,0,0,0,401.93,351.51Zm-6.76-1.19a1.42,1.42,0,0,0,1.64,1.29,3.56,3.56,0,0,0,2.53-1V349.1a10.21,10.21,0,0,0-1.9-.22C396.34,348.89,395.17,349.23,395.17,350.33Z" transform="translate(-355.09 -323.29)" fill="#fff"/>
@@ -180,14 +174,7 @@
               <path d="M413.19,337.58v-8.75h1.73v1.09a4,4,0,0,1,2.92-1.33,3,3,0,0,1,2.73,1.4,4.33,4.33,0,0,1,3.06-1.4,3.21,3.21,0,0,1,3.32,3.52v5.47h-2v-5.41a1.67,1.67,0,0,0-1.73-1.84,2.94,2.94,0,0,0-2.17,1.18c0,0.2,0,.4,0,0.6v5.47h-2v-5.41a1.67,1.67,0,0,0-1.73-1.84,3.11,3.11,0,0,0-2.32,1.35v5.91h-2Z" transform="translate(-355.09 -323.29)" fill="#fff"/><rect x="74.72" y="1.52" width="1.95" height="12.76" fill="#fff"/>
               <path d="M370.53,323.31l-0.16,0-15.28,1.6v28L370.37,362l15.28-9.09v-28Zm13.12,28.45-13.28,7.9-13.28-7.9V340.28l13.22,7.87,0,1.43-9.07-5.4v1.38l9.11,5.47,0,1.46-9.1-5.42v1.38l9.11,5.47h0l9.19-5.5v-1.39h0v-4.52l4.1-2.45v11.67Zm0-13.16L380,340.74h0l-1.68,1-8-4.76v1.38l6.84,4.07-0.06,0-0.15.09-1,.57-5.64-3.36v1.38l4.45,2.65-1.05.7,0,0-3.36-2v1.38l2.21,1.3-2.25,1.35-13.16-7.82,13.17-7.92h0Zm0-1.39-13.35-7.87h0l-13.2,7.86v-10.5l13.28-1.39,13.28,1.39v10.51Z" transform="translate(-355.09 -323.29)" fill="#fff"/>
             </svg>
-          <!--
-            <img 
-              src="img/logo-name.svg" 
-              alt="Логотип HtmlAcademy"
-              width="113"
-              height="39">-->
           </a> 
-          
         </p>
       </footer>
     </div>
@@ -199,24 +186,24 @@
         method="get">
         <p class="hotel-search-item">
           <label for="arrival-date">Дата заезда</label>
-          <input type="text" id="arrival-date" name="arrival-date" placeholder="24 апреля 2017">
+          <input class="search-form-field" type="text" id="arrival-date" name="arrival-date" placeholder="24 апреля 2017">
           <button class="button hotel-search-button-calendar" type="button">Календарь</button>
         </p>
         <p class="hotel-search-item">
           <label for="departure-date">Дата выезда</label>
-          <input type="text" id="departure-date" name="departure-date" placeholder="4 июля 2017">
+          <input class="search-form-field" type="text" id="departure-date" name="departure-date" placeholder="4 июля 2017">
           <button class="button hotel-search-button-calendar" type="button">Календарь</button>
         </p>
         <p class="hotel-search-item">
           <label for="adults-count">Взрослые</label>
           <button class="button hotel-search-button-minus" type="button">-</button>
-          <input type="number" id="adults-count" name="adults-count" min="1" max="10" value="2">
+          <input class="search-form-field" type="number" id="adults-count" name="adults-count" min="1" max="10" value="2">
           <button class="button hotel-search-button-plus" type="button">+</button>
         </p>
         <p class="hotel-search-item">
           <label for="adults-count">Дети</label>
           <button class="button hotel-search-button-minus" type="button">-</button>
-          <input type="number" id="children-count" name="children-count" min="1" max="10" value="2">
+          <input class="search-form-field" type="number" id="children-count" name="children-count" min="1" max="10" value="2">
           <button class="button hotel-search-button-plus" type="button">+</button>
         </p>
         <button class="button hotel-search-button-find" type="submit">Найти</button>

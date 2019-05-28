@@ -6,13 +6,13 @@ body {
     font-size: 14px;
     line-height: 26px;
     font-weight: 700;
-    color: #000;
+    color: #000000;
     text-transform: uppercase;
 
     background-color: #f1f1f1;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -21,147 +21,142 @@ h1 {
     font-size: 21px;
 }
 
-
-/*На данном этапе уже должен быть указан?*/
-.visually-hidden{
-
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
-.background-container{
-    background-color: #fff;
+.background-container {
     width: 1200px;  /*размер сайта*/
     margin: 0 auto; /*центровка*/
-    box-shadow: 0px 5px 15px 0px rgba(0,1,1,0.2); /*правильно ли снята информация по тени?*/
+    box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2); 
 }
-
 
 .site-header,
-.container{
-    background-color: #fff;
+.container {
+    background-color: #ffffff;
 }
 
-.site-footer{
-    background-color: rgba(255,255,255,0.9);
+.site-footer {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 /*Navigation*/
-
-
-.site-navigation{
+.site-navigation {
     list-style: none;
 }
 
-.site-navigation a{
-    color: #000;
+.site-navigation a {
+    color: #000000;
 }
 
-.site-navigation a:hover{
+.site-navigation a:hover {
     color: #81b3d2;
 }
 
-.site-navigation a:active{
-    color: rgba(0,0,0,0.3);
+.site-navigation a:active {
+    color: rgba(0, 0, 0, 0.3);
 }
 
-
 /*Main content*/
-
-
 /*Main > intro*/
-.intro{
+.intro {
     background-color: #38484d;
-    background-image: 
-        url("../img/intro-polygon.svg"),
-        url("../img/intro-background.jpg");
+    background-image: url("../img/intro-polygon.svg"), url("../img/intro-background.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: bottom center,top center;
+    background-position: bottom center, top center;
     /*min-height: 509px;    */
-
     text-align: center;
 }
 
 /*Main > advantages*/
-.advantage-list-caption{
-    color: #333;
+.advantage-list-caption {
+    color: #333333;
     text-align: center;
     font-weight: 400;
 }
 
-.advantage-list{
+.advantage-list {
     list-style: none;
 }
 
-.advantage-item-description{
-    color: #fff;
+.advantage-item-description {
+    color: #ffffff;
     text-align: center;
     background-color: #81b3d2;
 }
 
-.advantage-item:nth-of-type(n+3) .advantage-item-description{
-    color: #000;
+.advantage-item:nth-of-type(n+3) .advantage-item-description {
+    color: #000000;
     background-color: #eeeeee;
 }
 
-.advantage-item-description h3{
+.advantage-item-description h3 {
     font-size: 21px;
 }
 
-.advantage-item-description p{
+.advantage-item-info{
     font-weight: 400;
 }
 
-.city-advantage-list{
+.city-advantage-list {
     list-style: none;
 }
 
-.city-advantage-item{
+.city-advantage-item {
     text-align: center;
 }
 
-.city-advantage-item h4{
+.city-advantage-item h4 {
     font-size: 21px;
 }
 
-.city-advantage-item p{
+.city-advantage-item p {
     font-weight: 400;
 }    
 
 /*Main > search*/
-.search{
+.search {
     text-align: center;
 }
 
-.got-interested{
+.got-interested {
     font-size: 30px;
     line-height: 36px;
 }
 
-.search p{
-    color: #333;
+.search p {
+    color: #333333;
     font-weight: 400;
 }
 
-.button.button-search{
+.button.button-search {
     font-size: 21px;
-    color: #fff;
+    color: #ffffff;
     background-color: #766357;
 }
 
-.button-search:hover{
+.button-search:hover {
     background-color: #604e43;
 }
 
-.button-search:active{
-    color: rgba(0,0,0,0.3);
+.button-search:active {
+    color: rgba(0, 0, 0, 0.3);
     background-color: #503e33;
 }
 
 /*Footer*/
-.footer-hashtag{
+.footer-hashtag {
     font-size: 21px;
 }
 
-.footer-social-list{
+.footer-social-list {
     list-style: none;
 }
 
@@ -170,91 +165,86 @@ h1 {
     fill: #231f20;
 }
 
-
 /*hotel-search*/
-.hotel-search{
-    background-color: #fff; 
+.hotel-search {
+    background-color: #ffffff; 
 }
 
 
 .button {
-    font: inherit; /*Наследует от родительского элемента или от body?*/
+    font: inherit;
 
     text-align: center;
     vertical-align: middle;
     text-transform: uppercase;
 }
 
-.hotel-search-item input[type="text"],
-.hotel-search-item input[type="number"]{
+.search-form-field {
+    outline: none;
     font: inherit;
     text-transform: uppercase;
     background-color: #f2f2f2;
-    /*
-        какой указать у этого элемента border? 
-        если его совсем убрать будет "скакать" при фокусе
-    */
+    
     border: 2px solid transparent; 
 }
 
-.hotel-search-item input[type="text"]:hover,
-.hotel-search-item input[type="number"]:hover{
+.search-form-field:hover {
     background-color: #ebebeb;
 }
 
-.hotel-search-item input[type="text"]:focus,
-.hotel-search-item input[type="number"]:focus{
-    background-color: #fff;
-    border: 2px solid #e5e5e5;
+.search-form-field:focus {
+    background-color: #ffffff;
+    /*border: 2px solid #e5e5e5;*/
+    border-color: #e5e5e5;
 }
 
-.hotel-search-button-find{
+.hotel-search-button-find {
     font: inherit;
     text-transform: uppercase;
-    color: #fff;
+    color: #ffffff;
     background-color: #81b3d2;
 }
 
-.hotel-search-button-find:hover{
+.hotel-search-button-find:hover {
     background-color: #669ec0;
 }
 
-.hotel-search-button-find:active{
-    color: rgba(0,0,0,0.3);
+.hotel-search-button-find:active {
+    color: rgba(0, 0, 0, 0.3);
     background-color: #5496bd;
 }
 
 /*Внутрення страница*/
-.site-navigation-current a{
+.site-navigation-current a {
     color: #766357;
 }
 
-.appartment-item h3{
+.appartment-item h3 {
     font-size: 21px;
 }
 
 .appartment-type,
-.appartment-price{
+.appartment-price {
     font-size: 14px;
     line-height: 21px;
     color: #333333;
 }
 
-.button-detail{
-    color: #fff;
+.button-detail {
+    color: #ffffff;
     background-color: #81b3d2;
 }
 
-.button-booking{
-    color: #fff;
+.button-booking {
+    color: #ffffff;
     background-color: #766357;
 }
 
-.rating-digit{
-    color: #666;
+.rating-digit {
+    color: #666666;
     background-color: #f2f2f2;
 }
 
-.appartment-item{
+.appartment-item {
     list-style: none;
 }
