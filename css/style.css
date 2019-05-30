@@ -70,7 +70,8 @@ h1 {
     background-color: #38484d;
     background-image: url("../img/intro-polygon.svg"), url("../img/intro-background.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: bottom center, top center;
+    background-position:  center bottom,  center top;
+    background-size: 100%, 100%;
     /*min-height: 509px;    */
     text-align: center;
 }
@@ -310,8 +311,13 @@ h1 {
 
 .intro {
     margin-bottom: 60px;
+    
     /*временно для сетки*/
     min-height: 510px;
+}
+
+.main-container {
+    background-color: #ffffff;
 }
 
 .main-header {
@@ -411,6 +417,35 @@ h1 {
     margin-left: auto;
 }
 
+.advantage-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.advantage-item-description {
+    min-width: 400px;
+    min-height: 256px;
+}
+
+.advantage-item:nth-child(1) {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.city-advantage-list {
+    display: flex;
+    min-width: 400px;
+    min-height: 330px;
+}
+
+.advantage-item:nth-child(2) {
+    display: flex;
+}
+
+.advantage-item {
+    min-width: 400px;
+    min-height: 256px;    
+}
 
 /*временные стили для сетки*/
 /*body > * {
