@@ -277,9 +277,13 @@ h1 {
     margin:0 auto;
 }*/
 
+.container {
+    padding: 0 72px;
+}
+
 .site-navigation {
     margin: 0px;
-    padding: 0 72px;
+    /*padding: 0 72px;*/
     display: flex;
     align-items: center;
     /*временно для сетки*/
@@ -363,14 +367,50 @@ h1 {
 
 .hotel-search {
     width: 570px;
-    min-height: 395px;
     padding: 55px;
     margin: 0 auto;
+
+    /*временно для сетки*/
+    min-height: 395px;
 }
 
-.hotel-search-item{
+.hotel-search-item {
     display: block;
 }
+
+.appartments {
+
+    /*временно для сетки*/
+    min-width: 455px;
+}
+
+.appartment-list {
+    padding: 0;
+}
+
+.appartment-item {
+    display: flex;
+    padding: 30px 0;
+    /*временно для сетки*/
+    min-height: 150px;  
+}
+
+.appartment-item-image {
+    margin-right: 30px;
+}
+
+.appartment-item-second-column {
+    width: 560px;
+}
+
+.appartment-item-header {
+    margin-top: 0;
+}
+
+.appartment-rating {
+    margin-left: auto;
+}
+
 
 /*временные стили для сетки*/
 /*body > * {
