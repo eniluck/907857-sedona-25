@@ -11,7 +11,12 @@
     <div class="background-container">
       <header class="site-header">
         <nav class="main-navigation">
-          <a>
+          <!--
+              Расположить данный блок с помощью абсолютного позиционирования?
+              Сделать для .navigation-logo position:absolute а для блока .main-navigation relative ? 
+              или все таки включить .navigation-logo в список .site-navigation и стилизовать с помощью display:flex?
+          -->
+          <a class="navigation-logo">
             <img 
             src="img/logo.svg"  
             alt="city of sedona"
@@ -19,16 +24,16 @@
             height="70">  
           </a>
           <ul class="site-navigation">
-            <li>
+            <li class="site-navigation-item">
               <a href="info.html">Информация</a>
             </li>
-            <li>
+            <li class="site-navigation-item">
               <a href="foto-video.html">Фото и видео</a>
             </li>
-            <li>
+            <li class="site-navigation-item">
               <a href="state-map.html">Карта штата</a>
             </li>
-            <li>
+            <li class="site-navigation-item">
               <a href="catalog.html">Гостинницы</a>
             </li>
           </ul>

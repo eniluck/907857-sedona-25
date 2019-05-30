@@ -248,3 +248,75 @@ h1 {
 .appartment-item {
     list-style: none;
 }
+
+
+/*Сеточные стили*/
+.site-header {
+    margin-bottom: 75px;
+    min-height: 55px;
+}
+
+/*
+/*абсолютное позиционирование*/
+.main-navigation {
+    position: relative;
+}
+
+.navigation-logo {
+    position: absolute;
+    left: calc(50% - 140px/2);
+    top: 0 px;
+}
+*/
+
+.navigation-logo {
+    display: block;
+    width: 140px;
+    height: 75px;
+    margin:0 auto;
+}
+
+.site-navigation {
+    margin: 0px;
+    padding: 0 72px;
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+    min-height: 55px;
+}
+
+.site-navigation-item {
+    width: 128px;
+    margin-right: 112px;
+}
+
+.site-navigation-item:nth-child(2) {
+    margin-right: auto;
+}
+
+.site-navigation-item:last-child {
+    margin-right: 0;
+}
+
+.site-navigation-item:nth-last-child(1),
+.site-navigation-item:nth-last-child(2) {
+    text-align: right;
+}
+
+
+/*временные стили для сетки*/
+/*body > * {
+    background: rgba(255, 0, 0, 0.3);
+}
+
+body > * > * {
+    background: rgba(255, 0, 255, 0.3);
+}
+
+body > * > * > * {
+    background: rgba(255, 255, 0, 0.3);
+}
+
+body > * > * > * > *{
+    background: rgba(0, 255, 0, 0.3);
+}*/
