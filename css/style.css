@@ -316,11 +316,6 @@ h1 {
     min-height: 510px;
 }
 
-.top-layout{
-    display: flex;
-    flex-direction: column-reverse;
-}
-
 .main-container {
     background-color: #ffffff;
 }
