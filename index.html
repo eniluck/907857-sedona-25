@@ -11,11 +11,6 @@
     <div class="background-container">
       <header class="site-header">
         <nav class="main-navigation">
-          <!--
-              Расположить данный блок с помощью абсолютного позиционирования?
-              Сделать для .navigation-logo position:absolute а для блока .main-navigation relative ? 
-              или все таки включить .navigation-logo в список .site-navigation и стилизовать с помощью display:flex?
-          -->
           <a class="navigation-logo">
             <img 
             src="img/logo.svg"  
@@ -40,21 +35,18 @@
         </nav>
       </header>
       <main class="main-container">
-        <section class="intro">
-          <h2 class="visually-hidden">Добро пожаловать в Седона!</h2>
-          <img src="img/intro-welcome.svg" 
-            alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks."
-            width="458"
-            height="352">
-        </section>
-        <!-- 
-          Неудобный заголовок h1. 
-          Он должен быть именно на первом уровне? 
-          Может лучего было вынести его в отдельный блок вместе с .advantage-list-caption ?
-        -->
-        <h1 class="main-header">Седона — небольшой городок в Аризоне,<br>
-          заслуживающий большего!
-        </h1>        
+        <div class="top-layout">
+          <h1 class="main-header">Седона — небольшой городок в Аризоне,<br>
+            заслуживающий большего!
+          </h1>
+          <section class="intro">
+            <h2 class="visually-hidden">Добро пожаловать в Седона!</h2>
+            <img src="img/intro-welcome.svg" 
+              alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks."
+              width="458"
+              height="352">
+          </section>
+        </div>
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества</h2>
           <p class="advantage-list-caption">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
