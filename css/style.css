@@ -66,6 +66,7 @@ img {
     vertical-align: middle;
     text-transform: uppercase;
     border: none;
+    outline: none;
 }
 
 /*Navigation*/
@@ -224,12 +225,68 @@ img {
 }
 
 .search-form-field {
+    box-sizing: border-box;
     outline: none;
     font: inherit;
     text-transform: uppercase;
     background-color: #f2f2f2;
     
     border: 2px solid transparent; 
+    height: 38px;
+    padding: 0 13px;
+
+}
+
+.search-form-field.field-text {
+    width: 308px;    
+}
+
+
+.search-form-field.field-number {
+    width: 38px;    
+}
+
+.hotel-search-button-minus {
+    padding: 0;
+    height: 38px;
+    width: 38px; 
+    background-image: url("../img/minus-grey.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hotel-search-button-plus 
+{
+    padding: 0;
+    height: 38px;
+    width: 38px; 
+    background-image: url("../img/plus-grey.png");
+    background-repeat: no-repeat;
+    background-position: center;    
+}
+
+.hotel-search-button-plus:hover,
+.hotel-search-button-plus:focus {
+    background-image: url("../img/plus-black.png");
+}
+
+.hotel-search-button-plus:active {
+    background-image: url("../img/plus-blue.png");
+}
+
+.hotel-search-button-minus:hover,
+.hotel-search-button-minus:focus {
+    background-image: url("../img/minus-black.png");    
+}
+
+.hotel-search-button-minus:active {
+    background-image: url("../img/minus-blue.png");
+}
+
+
+.hotel-search-line {
+    display: flex;
+    justify-content: space-between;
 }
 
 .search-form-field:hover {
@@ -250,6 +307,7 @@ img {
     text-transform: uppercase;
     color: #ffffff;
     background-color: #81b3d2;
+    margin-top: 54px;
 }
 
 .hotel-search-button-find:hover {
@@ -260,6 +318,32 @@ img {
     color: rgba(0, 0, 0, 0.3);
     background-color: #5496bd;
 }
+
+.hotel-search-button-calendar {
+    padding: 0;
+    height: 38px;
+    width: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: bottom;
+    background-color: #f2f2f2;
+}
+
+
+.hotel-search-button-calendar * {
+    fill: #cacaca;
+}
+
+.hotel-search-button-calendar:hover,
+.hotel-search-button-calendar:focus * {
+    fill: #000000;
+}
+
+.hotel-search-button-calendar:active * {
+    fill: #81b3d2;
+}
+
 
 /*Внутрення страница*/
 .site-navigation-current a {
@@ -362,6 +446,10 @@ img {
     min-height: 510px;
 }
 
+.intro img {
+    margin-top: 76px;
+}
+
 .main-container {
     background-color: #ffffff;
 }
@@ -436,6 +524,7 @@ img {
 }
 
 .hotel-search {
+    box-sizing: border-box;
     width: 570px;
     padding: 55px;
     margin: 0 auto;
@@ -445,8 +534,21 @@ img {
 }
 
 .hotel-search-item {
-    display: block;
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 29px;
+    padding: 0;
 }
+ 
+
+.hotel-search-item label {
+    display: inline-block;
+    min-width: 112px; /*???*/
+    margin-right: auto;
+}
+
+
 
 .appartments {
 
