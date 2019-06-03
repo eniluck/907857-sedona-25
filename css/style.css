@@ -522,14 +522,35 @@ img {
     color: #333333;
 }
 
+.appartment-type {
+    display: inline-block;
+    min-width: 110px;
+    margin-right: 2px;
+}
+
 .button-detail {
     color: #ffffff;
     background-color: #81b3d2;
+    padding: 1px 16px;
+    margin: 0px;
+    margin-right: 4px;
 }
 
 .button-booking {
     color: #ffffff;
     background-color: #766357;
+    padding: 1px 16px;
+    margin: 0px;
+}
+
+/*
+А как размер отступа сделать между картинкой фона?
+*/
+.rating-starts {
+    display: block;
+    width: 90px;
+    height: 17px;
+    background-image: url("../img/star.svg");
 }
 
 .rating-digit {
@@ -538,9 +559,14 @@ img {
 }
 
 .appartment-item {
+    display: flex;    
     list-style: none;
+    padding-left: 72px;
+    padding-right: 72px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    border-top: 1px solid #e5e5e5;
 }
-
 
 /*------------- Сеточные стили -------------*/
 .main-container {
@@ -610,14 +636,10 @@ img {
     padding: 0;
 }
 
-.appartment-item {
-    display: flex;
-    padding: 30px 0;
-    /*временно для сетки*/
-    min-height: 150px;  
-}
+
 
 .appartment-item-image {
+    margin-top: 5px;
     margin-right: 30px;
 }
 
@@ -627,6 +649,17 @@ img {
 
 .appartment-item-header {
     margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.appartment-info {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.appartment-booking {
+    margin: 0px;
+    padding: 0px;
 }
 
 .appartment-rating {
@@ -654,6 +687,8 @@ img {
     min-width: 400px;
     min-height: 256px;    
 }
+
+
 
 /*временные стили для сетки*/
 /*body > * {
