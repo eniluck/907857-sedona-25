@@ -11,6 +11,7 @@ body {
 
     background-color: #f1f1f1;
     counter-reset: block-number;
+    position: relative;
 }
 
 a {
@@ -44,6 +45,7 @@ img {
 }
 
 .background-container {
+    position: relative;    
     width: 1200px;  /*размер сайта*/
     margin: 0 auto; /*центровка*/
     box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2); 
@@ -83,7 +85,7 @@ img {
 .navigation-logo {
     position: absolute;
     left: calc(50% - 140px/2);
-    top: 0 px;
+    top: 0;
 }
 
 .site-navigation {
@@ -297,13 +299,22 @@ img {
 
 /*---------- Footer ----------*/
 .site-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     /*min-height: 120px;*/
+    box-sizing: border-box;
+    min-width: 1200px;
     padding: 36px 73px;
     /*padding: 36px 132px;*/
     display: flex;
     /*align-items: center;*/
     /*justify-content: space-between;*/
     background-color: rgba(255, 255, 255, 0.9);    
+}
+
+.inner-page .site-footer {
+    position: static;    
 }
 
 .footer-hashtag {
@@ -379,6 +390,12 @@ img {
 /*hotel-search*/
 .hotel-search {
     background-color: #ffffff; 
+    /*
+        Вот в этом месте вопрос. Правильно ли я сделал absolute от body?
+    */
+    position: absolute;
+    bottom: 167px;
+    left: 426px;
 }
 
 .hotel-search-form {
@@ -408,42 +425,64 @@ img {
 }
 
 .hotel-search-button-minus {
+    position: relative;
     padding: 0;
     height: 38px;
     width: 38px; 
-    background-image: url("../img/minus-grey.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background-color: #f2f2f2;
+}
+
+.hotel-search-button-minus::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 13px;
+    top: 18px;
+    width: 12px;
+    height: 3px;
+    background-color: #a9a9a9;
 }
 
 .hotel-search-button-plus 
 {
+    position: relative;
     padding: 0;
     height: 38px;
     width: 38px; 
-    background-image: url("../img/plus-grey.png");
-    background-repeat: no-repeat;
-    background-position: center;    
+    background-color: #f2f2f2;
 }
 
-.hotel-search-button-plus:hover,
-.hotel-search-button-plus:focus {
-    background-image: url("../img/plus-black.png");
+.hotel-search-button-plus::before,
+.hotel-search-button-plus::after {
+    content: "";
+    display: block;
+    position: absolute;    
+    width: 12px;
+    height: 3px;
+    left: 13px;
+    top: 18px;
+    background-color: #a9a9a9;    
 }
 
-.hotel-search-button-plus:active {
-    background-image: url("../img/plus-blue.png");
+.hotel-search-button-plus::after {
+    transform: rotate(90deg);
 }
 
-.hotel-search-button-minus:hover,
-.hotel-search-button-minus:focus {
-    background-image: url("../img/minus-black.png");    
+
+.hotel-search-button-plus:hover::before,
+.hotel-search-button-plus:focus::before,
+.hotel-search-button-plus:hover::after,
+.hotel-search-button-plus:focus::after,
+.hotel-search-button-minus:hover::before,
+.hotel-search-button-minus:focus::before {
+    background-color: #000000;
 }
 
-.hotel-search-button-minus:active {
-    background-image: url("../img/minus-blue.png");
+.hotel-search-button-plus:active::before,
+.hotel-search-button-plus:active::after,
+.hotel-search-button-minus:active::before {
+    background-color: #81b3d2;
 }
-
 
 .hotel-search-line {
     display: flex;
@@ -548,14 +587,55 @@ img {
 */
 .rating-starts {
     display: block;
-    width: 90px;
+    width: 114px;
     height: 17px;
-    background-image: url("../img/star.svg");
+    margin: 0;
+    margin-top: 3px;
+    padding: 0;
+}
+
+.stars-1 {
+    background-image: url("../img/star.svg");  
+    background-repeat:   no-repeat;  
+    background-position:  96px 0 ;
+
+}
+
+.stars-2 {
+    background-image: url("../img/star.svg"), url("../img/star.svg");  
+    background-repeat:   no-repeat, no-repeat;  
+    background-position:  72px 0, 96px 0 ;
+}
+
+.stars-3 {
+    background-image:  url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg");  
+    background-repeat:  no-repeat, no-repeat, no-repeat;  
+    background-position:  48px 0, 72px 0, 96px 0 ;
+}
+
+.stars-4 {
+    background-image:  url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg");  
+    background-repeat:  no-repeat, no-repeat, no-repeat, no-repeat;  
+    background-position:  24px 0, 48px 0, 72px 0, 96px 0 ;
+}
+
+.stars-5 {
+    background-image: url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg");  
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;  
+    background-position: 0 0, 24px 0, 48px 0, 72px 0, 96px 0 ;
 }
 
 .rating-digit {
+
+    display: inline-block;
     color: #666666;
     background-color: #f2f2f2;
+    padding-left: 16px;
+    padding-right: 12px;
+    margin: 0;   
+    margin-top: 48px; 
+    font-weight: 400px;
+
 }
 
 .appartment-item {
@@ -566,6 +646,11 @@ img {
     padding-top: 25px;
     padding-bottom: 30px;
     border-top: 1px solid #e5e5e5;
+    background-color: #fefefe;
+}
+
+.appartment-item:last-child {
+    border-bottom: 1px solid #e5e5e5;    
 }
 
 /*------------- Сеточные стили -------------*/
@@ -634,6 +719,7 @@ img {
 
 .appartment-list {
     padding: 0;
+    margin: 0;
 }
 
 
