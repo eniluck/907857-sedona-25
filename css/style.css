@@ -51,8 +51,7 @@ img {
     box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2); 
 }
 
-.site-header,
-.container {
+.site-header{
     background-color: #ffffff;
 }
 
@@ -557,6 +556,127 @@ img {
 .appartment-item-header:focus {
     color: rgba(0, 0, 0, 0.3);
 }
+
+/*------------форма поиска------------*/
+.search-appartment {
+    background-color: #81b3d2;
+    background-image: url("../img/filter-background.jpg");
+    padding-top: 31px;
+    padding-bottom: 31px;
+}
+
+.search-form fieldset {
+    border:none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-form legend {
+    font-size: 16px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
+.search-form ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-option {
+    font-size: 14px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
+.search-input-number {
+    font: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #ffffff;
+}
+
+.search-button {
+    font: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    background-color:  transparent;
+    color: #ffffff;
+}
+
+.search-form {
+    display: flex;
+    justify-items: flex-end;
+}
+
+.column-1 {
+    min-width: 241px;
+}
+
+.column-2 {
+    min-width: 241px;
+}
+
+.column-3 {
+    margin-left: auto;
+    min-width: 328px;
+}
+
+/*------------форма сортировки------------*/
+.result-sort {
+    background-color: #fefefe;
+}
+.result-found {
+    display: inline-block;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+}
+
+.result-found,
+.result-sort-list-label,
+.result-sort-list,
+.result-sort-item,
+.result-sort-by-value {
+    display: inline-block;
+}
+
+.result-found {
+    min-width: 165px;
+}
+
+.result-sort-list-label {
+    min-width: 76px;
+}
+
+
+.result-sort-item {
+    margin-left: 33px;
+}
+
+
+
+.result-sort-list-label a,
+.result-sort-item a {
+    font-size: 12px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.result-sort-list {
+    list-style: none;
+}
+
+.result-sort-item a {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.result-sort-item.active a {
+    color: #81b3d2;
+}
+
 
 .appartment-type,
 .appartment-price {
