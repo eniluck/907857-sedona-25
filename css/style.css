@@ -545,8 +545,17 @@ img {
     color: #766357;
 }
 
-.appartment-item h3 {
+.appartment-item-header {
     font-size: 21px;
+}
+
+.appartment-item-header:hover {
+    color: #81b3d2;
+}
+
+.appartment-item-header:active,
+.appartment-item-header:focus {
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .appartment-type,
@@ -570,11 +579,29 @@ img {
     margin-right: 4px;
 }
 
+.button-detail:hover {
+    background-color: #669ec0;
+}
+
+.button-detail:active,
+.button-detail:focus {
+    background-color: #5496bd;
+}
+
 .button-booking {
     color: #ffffff;
     background-color: #766357;
     padding: 1px 16px;
     margin: 0px;
+}
+
+.button-booking:hover {
+    background-color: #604e43;
+}
+
+.button-booking:active,
+.button-booking:focus {
+    background-color: #503e33;
 }
 
 /*
