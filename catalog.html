@@ -74,16 +74,27 @@
               </ul>
             </fieldset>
             <div class="form-column column-cost">
-              <fieldset>
-                <legend>Стоимость в сутки (Р):</legend>
-                <label class="visually-hidden" for="search-price-from">
-                  Стоимость от:
-                </label>
-                <input class="search-input search-input-number" type="number" id="search-price-from" name="search-price-from" value="" min="0" max="3000" placeholder="ОТ 0">
-                <label class="visually-hidden" for="search-price-to">
-                  Стоимость до:
-                </label>
-                <input class="search-input search-input-number" type="number" id="search-price-to" name="search-price-to" value="" min="0" max="3000" placeholder="ДО 3000">   
+              <fieldset class="filter-range">
+                <legend class="filter-range-title">Стоимость в сутки (Р):</legend>
+                <div class="price-controls">
+                  <label class="min-price">
+                    От
+                    <input class="search-input" type="text" name="search-price-from" value="2" min="0" max="3000" >
+                  </label>
+                  
+                  <label class="max-price">
+                    До
+                    <input class="search-input" type="text" name="search-price-to" value="3000" min="0" max="3000" >
+                  </label>
+                  
+                </div>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
+                </div>
               </fieldset>
               <button type="submit" class="button search-button">
                 Показать
