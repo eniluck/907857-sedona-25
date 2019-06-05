@@ -569,7 +569,7 @@ input[type="radio"].visually-hidden {
     padding-bottom: 31px;
 }
 
-.search-form fieldset {
+.form-column {
     border:none;
     padding: 0;
     margin: 0;
@@ -643,6 +643,7 @@ input[type="radio"].visually-hidden {
 
 .column-house-type {
     min-width: 241px;
+    margin-left: 15px;
 }
 
 .column-cost {
@@ -845,7 +846,27 @@ input[type="radio"].visually-hidden {
     color: #81b3d2;
 }
 
+.triangle-up {
+    display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 10px solid #cacaca;
+}
 
+.triangle-down {
+    display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+    border-top: 10px solid #81b3d2;
+
+    margin-left: 12px;
+}
+
+/*------*/
 .appartment-type,
 .appartment-price {
     font-size: 14px;
