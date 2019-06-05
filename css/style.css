@@ -28,7 +28,9 @@ img {
     height: auto;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -291,6 +293,11 @@ img {
     background-color: #503e33;
 }
 
+/*---------- Map ----------*/
+.map {
+    position: relative;
+}
+
 /*---------- Footer ----------*/
 .site-footer {
     position: absolute;
@@ -384,12 +391,10 @@ img {
 /*hotel-search*/
 .hotel-search {
     background-color: #ffffff; 
-    /*
-        Вот в этом месте вопрос. Правильно ли я сделал absolute от body?
-    */
     position: absolute;
-    bottom: 167px;
-    left: 426px;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .hotel-search-form {
@@ -437,8 +442,7 @@ img {
     background-color: #a9a9a9;
 }
 
-.hotel-search-button-plus 
-{
+.hotel-search-button-plus {
     position: relative;
     padding: 0;
     height: 38px;
@@ -584,9 +588,27 @@ img {
 }
 
 .search-option {
+    position: relative;
     font-size: 14px;
     line-height: 21px;
     color: #ffffff;
+    padding-left: 40px;
+    margin-bottom: 35px;
+}
+
+.search-input + label:before{
+    content:"";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 27px;
+    height: 23px;
+    background-image: url("../img/checkbox-off.svg");
+    background-repeat: no-repeat;
+}
+
+.search-input:checked + label:before {
+    background-image: url("../img/checkbox-on.svg");
 }
 
 .search-input-number {
@@ -611,15 +633,19 @@ img {
     justify-items: flex-end;
 }
 
-.column-1 {
+.form-column legend{
+    margin-bottom: 20px;
+}
+
+.column-infrastructure {
     min-width: 241px;
 }
 
-.column-2 {
+.column-house-type {
     min-width: 241px;
 }
 
-.column-3 {
+.column-cost {
     margin-left: auto;
     min-width: 328px;
 }
@@ -627,6 +653,8 @@ img {
 /*------------форма сортировки------------*/
 .result-sort {
     background-color: #fefefe;
+    display: flex;
+    align-items: center;
 }
 .result-found {
     display: inline-block;
@@ -635,12 +663,12 @@ img {
     font-weight: 700;
 }
 
-.result-found,
-.result-sort-list-label,
-.result-sort-list,
-.result-sort-item,
 .result-sort-by-value {
-    display: inline-block;
+    margin-left: auto;
+}
+
+.result-sort-item {
+    display: inline-block;    
 }
 
 .result-found {
@@ -656,9 +684,13 @@ img {
     margin-left: 33px;
 }
 
+.result-sort-list-label {
+    font-size: 12px;
+    line-height: 21px;
+    font-weight: 400;
+}
 
 
-.result-sort-list-label a,
 .result-sort-item a {
     font-size: 12px;
     line-height: 21px;
