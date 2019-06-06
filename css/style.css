@@ -946,9 +946,8 @@ input[type="radio"].visually-hidden {
     background-color: #503e33;
 }
 
+ 
 /*
-А как размер отступа сделать между картинкой фона?
-*/
 .rating-starts {
     display: block;
     width: 114px;
@@ -988,6 +987,36 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;  
     background-position: 0 0, 24px 0, 48px 0, 72px 0, 96px 0 ;
 }
+*/
+
+.rating-starts {
+    display: block;
+    background-image: url("../img/star.svg");
+    width: 10px;
+    height: 17px;
+    margin: 0;
+    margin-top: 3px;
+    padding: 0;
+    background-repeat: space;
+    margin-left: auto;
+}
+
+.stars-1 {
+    width: 18px;
+}
+.stars-2 {
+    width: 42px;
+}
+.stars-3 {
+    width: 66px;
+}
+.stars-4 {
+    width: 90px;
+}
+.stars-5 {
+    width: 114px;
+}
+
 
 .rating-digit {
 
