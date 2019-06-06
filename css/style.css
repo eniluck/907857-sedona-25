@@ -70,7 +70,7 @@ input[type="radio"].visually-hidden {
     outline: none;
 }
 
-
+/*добавить элементам класс где есть падинги*/
 .container {
     padding: 0 72px;
 }
@@ -136,6 +136,7 @@ input[type="radio"].visually-hidden {
 
 /*----------Main content----------*/
 /*----------intro----------*/
+/*Для IE переделать background на after элемент*/
 .intro {
     background-color: #38484d;
     background-image: url("../img/intro-polygon.svg"), url("../img/intro-background.jpg");
@@ -985,7 +986,9 @@ TODO: упростить код. Общие стили убрать дублир
     background-position: 0 0, 24px 0, 48px 0, 72px 0, 96px 0 ;
 }
 */
-
+/*
+ToDo: Звёздочки
+*/
 .rating-starts {
     display: block;
     background-image: url("../img/star.svg");
