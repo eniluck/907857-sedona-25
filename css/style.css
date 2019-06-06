@@ -431,14 +431,14 @@ input[type="radio"].visually-hidden {
     background-color: #f2f2f2;
 }
 
-.hotel-search-button-minus::before {
+.hotel-search-button::before
+.hotel-search-button-plus::after {
     content: "";
     display: block;
     position: absolute;
-    left: 13px;
-    top: 18px;
-    width: 12px;
-    height: 3px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     background-color: #a9a9a9;
 }
 
@@ -450,16 +450,18 @@ input[type="radio"].visually-hidden {
     background-color: #f2f2f2;
 }
 
-.hotel-search-button-plus::before,
-.hotel-search-button-plus::after {
-    content: "";
-    display: block;
-    position: absolute;    
+/*
+TODO: упростить код. Общие стили убрать дублирование
+*/
+.hotel-search-button-minus::before {
     width: 12px;
     height: 3px;
-    left: 13px;
-    top: 18px;
-    background-color: #a9a9a9;    
+}
+
+.hotel-search-button-plus::before, 
+.hotel-search-button-plus::after {
+    width: 12px;
+    height: 3px;
 }
 
 .hotel-search-button-plus::after {
@@ -467,12 +469,8 @@ input[type="radio"].visually-hidden {
 }
 
 
-.hotel-search-button-plus:hover::before,
-.hotel-search-button-plus:focus::before,
-.hotel-search-button-plus:hover::after,
-.hotel-search-button-plus:focus::after,
-.hotel-search-button-minus:hover::before,
-.hotel-search-button-minus:focus::before {
+.hotel-search-button:hover::before,
+.hotel-search-button:focus::before {
     background-color: #000000;
 }
 
@@ -949,6 +947,7 @@ input[type="radio"].visually-hidden {
 /*
 А как размер отступа сделать между картинкой фона?
 */
+/*
 .rating-starts {
     display: block;
     width: 114px;
@@ -962,7 +961,6 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/star.svg");  
     background-repeat:   no-repeat;  
     background-position:  96px 0 ;
-
 }
 
 .stars-2 {
@@ -988,7 +986,35 @@ input[type="radio"].visually-hidden {
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;  
     background-position: 0 0, 24px 0, 48px 0, 72px 0, 96px 0 ;
 }
+*/
 
+.rating-starts {
+    display: block;
+    background-image: url("../img/star.svg");
+    width: 10px;
+    height: 17px;
+    margin: 0;
+    margin-top: 3px;
+    padding: 0;
+    background-repeat: repeat;
+    margin-left: auto;
+}
+
+.stars-1 {
+    width: 18px;
+}
+.stars-2 {
+    width: 42px;
+}
+.stars-3 {
+    width: 66px;
+}
+.stars-4 {
+    width: 90px;
+}
+.stars-5 {
+    width: 114px;
+}
 .rating-digit {
 
     display: inline-block;
@@ -1035,9 +1061,11 @@ input[type="radio"].visually-hidden {
     padding: 0px;
 }
 
+/*
 .advantages {
-    /*margin-bottom: 55px;*/
+    margin-bottom: 55px;
 }
+*/
 
 .got-interested {
     margin-top: 52px;
