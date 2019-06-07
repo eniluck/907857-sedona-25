@@ -190,9 +190,7 @@ input[type="checkbox"].visually-hidden{
     box-sizing: border-box;
     min-width: 400px;
     min-height: 256px;
-
     position: relative;
-
     color: #ffffff;
     text-align: center;
     background-color: #81b3d2;
@@ -213,7 +211,6 @@ input[type="checkbox"].visually-hidden{
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-
     position: absolute;
     top: 115px;
 }
@@ -336,7 +333,6 @@ input[type="checkbox"].visually-hidden{
     left: 0;
     box-sizing: border-box;
     min-width: 1200px;
-    /*padding: 36px 73px;*/
     padding-top: 36px;
     padding-bottom: 36px;
     display: flex;
@@ -360,7 +356,6 @@ input[type="checkbox"].visually-hidden{
 .footer-copyright {
     display: flex;
     justify-content: flex-end;
-
     width: 240px;
     margin: 0px;
     margin-top: 5px;
@@ -404,7 +399,6 @@ input[type="checkbox"].visually-hidden{
     fill: #5496bd;
 }
 
-
 .logo-name * { 
     fill: #231f20;
 }
@@ -428,11 +422,9 @@ input[type="checkbox"].visually-hidden{
     font: inherit;
     text-transform: uppercase;
     background-color: #f2f2f2;
-    
     border: 2px solid transparent; 
     height: 38px;
     padding: 0 13px;
-
 }
 
 .search-form-field:hover {
@@ -441,7 +433,6 @@ input[type="checkbox"].visually-hidden{
 
 .search-form-field:focus {
     background-color: #ffffff;
-    /*border: 2px solid #e5e5e5;*/
     border-color: #e5e5e5;
 }
 
@@ -449,9 +440,8 @@ input[type="checkbox"].visually-hidden{
     width: 308px;    
 }
 
-
 .search-form-field.field-number {
-    width: 38px;    
+    width: 38px;
 }
 
 .hotel-search-button {
@@ -686,8 +676,8 @@ input[type="checkbox"].visually-hidden{
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
-  padding-left: 65px;
+    width: 90px;
+    padding-left: 65px;
 }
 
 .price-controls input {
@@ -765,6 +755,7 @@ input[type="checkbox"].visually-hidden{
     display: flex;
     align-items: center;
 }
+
 .result-found {
     display: inline-block;
     font-size: 21px;
@@ -909,7 +900,6 @@ input[type="checkbox"].visually-hidden{
     background-color: #503e33;
 }
 
- 
 .rating-starts {
     display: block;
     background-image: url("../img/star.svg");
@@ -925,18 +915,23 @@ input[type="checkbox"].visually-hidden{
 .stars-1 {
     width: 24px;
 }
+
 .stars-2 {
     width: 48px;
 }
+
 .stars-3 {
     width: 72px;
 }
+
 .stars-4 {
     width: 96px;
 }
+
 .stars-5 {
     width: 120px;
 }
+
 .rating-digit {
     display: inline-block;
     color: #666666;
@@ -967,9 +962,6 @@ input[type="checkbox"].visually-hidden{
     width: 570px;
     padding: 55px;
     margin: 0 auto;
-
-    /*временно для сетки*/
-    min-height: 395px;
 }
 
 .hotel-search-item {
@@ -987,9 +979,6 @@ input[type="checkbox"].visually-hidden{
     text-align: left;
 }
 
-/*
-ToDo: Убрать все Min-width, для сетки
-*/
 .appartments {
     /*временно для сетки*/
     min-width: 455px;
