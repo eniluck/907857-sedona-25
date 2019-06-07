@@ -1,3 +1,6 @@
+/*
+ToDO: Проверить как выглядят странички в IE, Chrome, Firefox, Safari
+*/
 body {
     margin: 0;
     padding: 0;
@@ -29,8 +32,7 @@ img {
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type="checkbox"].visually-hidden{
   position: absolute;
 
   width: 1px;
@@ -53,11 +55,6 @@ input[type="radio"].visually-hidden {
     box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2); 
 }
 
-.site-header{
-    background-color: #ffffff;
-}
-
-
 .button {
     display: inline-block;    
     padding: 10px 30px;    
@@ -70,15 +67,18 @@ input[type="radio"].visually-hidden {
     outline: none;
 }
 
-/*добавить элементам класс где есть падинги*/
+/*ToDo: добавить элементам класс где есть падинги*/
 .container {
     padding: 0 72px;
 }
 
+/*ToDo: добавить класс который убирает паддинги у списков*/
 
-/*----------Navigation----------*/
+/*---------- Navigation ----------*/
+.site-header{
+    background-color: #ffffff;
+}
 
-/*абсолютное позиционирование*/
 .main-navigation {
     position: relative;
 }
@@ -91,6 +91,12 @@ input[type="radio"].visually-hidden {
 
 .site-navigation {
     list-style: none;
+    margin: 0px;
+    /*padding: 0 72px;*/
+    display: flex;
+    align-items: center;
+    /*временно для сетки*/
+    min-height: 55px;
 }
 
 .site-navigation a {
@@ -103,16 +109,6 @@ input[type="radio"].visually-hidden {
 
 .site-navigation a:active {
     color: rgba(0, 0, 0, 0.3);
-}
-
-
-.site-navigation {
-    margin: 0px;
-    /*padding: 0 72px;*/
-    display: flex;
-    align-items: center;
-    /*временно для сетки*/
-    min-height: 55px;
 }
 
 .site-navigation-item {
@@ -133,24 +129,29 @@ input[type="radio"].visually-hidden {
     text-align: right;
 }
 
+/*Внутренняя страница*/
+.site-navigation-current a {
+    color: #766357;
+}
 
-/*----------Main content----------*/
-/*----------intro----------*/
-/*Для IE переделать background на after элемент*/
+/*---------- Main content ----------*/
+.main-container {
+    background-color: #ffffff;
+}
+
+.main-header {
+    margin-bottom: 30px;
+}
+/*---------- intro ----------*/
+/*ToDo: Для IE переделать background на after элемент*/
 .intro {
     background-color: #38484d;
     background-image: url("../img/intro-polygon.svg"), url("../img/intro-background.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position:  center bottom,  center top;
     background-size: 100%, 100%;
-    /*min-height: 509px;    */
     text-align: center;
-}
-
-.intro {
     margin-bottom: 60px;
-    /*временно для сетки*/
-    /*min-height: 510px;*/
 }
 
 .intro img {
@@ -163,10 +164,20 @@ input[type="radio"].visually-hidden {
     color: #333333;
     text-align: center;
     font-weight: 400;
+    margin-bottom: 50px;    
 }
 
 .advantage-list {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding: 0px;        
+}
+
+.advantage-item {
+    min-width: 400px;
+    min-height: 256px;    
 }
 
 .advantage-item-description {
@@ -196,6 +207,7 @@ input[type="radio"].visually-hidden {
     top: 115px;
 }
 
+/* ToDo: Добавить класс для более гибкой стилизации */
 .advantage-item-description h3 {
     max-width: 200px;
     margin: 0 auto;
@@ -211,11 +223,8 @@ input[type="radio"].visually-hidden {
     background-color: #eeeeee;
 }
 
-/*
-    Вопрос: Как сделать чтобы у данного элемента (.advantage-item-info) привязка была не к предыдущему в потоке элементу,
-    а на расстоянии относительно нижней части блока?
-*/
-.advantage-item-info{
+/* ToDo: Обернуть во Flex box чтобы нижняя часть была к нижнему края блока */
+.advantage-item-info {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
@@ -234,6 +243,7 @@ input[type="radio"].visually-hidden {
 .city-advantage-item {
     background-repeat: no-repeat;
     background-position: center 60px;
+    text-align: center;
 }
 
 .city-advantage-item:nth-child(1) {
@@ -248,10 +258,6 @@ input[type="radio"].visually-hidden {
     background-image: url("../img/icon-present.svg");    
 }
 
-.city-advantage-item {
-    text-align: center;
-}
-
 .city-advantage-item h4 {
     font-size: 21px;
     margin-top: 166px;
@@ -261,7 +267,7 @@ input[type="radio"].visually-hidden {
     font-weight: 400;
 }    
 
-/*Main > search*/
+/*---------- search ----------*/
 .search {
     text-align: center;
 }
@@ -269,8 +275,12 @@ input[type="radio"].visually-hidden {
 .got-interested {
     font-size: 30px;
     line-height: 36px;
+    margin-top: 52px;
+    margin-bottom: 25px;
+    display: inline-block;    
 }
 
+/*ToDo: Какой тип блока по умолчанию у P ?*/
 .search p {
     color: #333333;
     font-weight: 400;
@@ -304,14 +314,10 @@ input[type="radio"].visually-hidden {
     position: absolute;
     bottom: 0;
     left: 0;
-    /*min-height: 120px;*/
     box-sizing: border-box;
     min-width: 1200px;
     padding: 36px 73px;
-    /*padding: 36px 132px;*/
     display: flex;
-    /*align-items: center;*/
-    /*justify-content: space-between;*/
     background-color: rgba(255, 255, 255, 0.9);    
 }
 
@@ -354,9 +360,7 @@ input[type="radio"].visually-hidden {
     margin-top: 0;
     margin-right: auto;
     padding: 0;
-    
-
-    list-style: none;    
+    list-style: none;
 }
 
 
@@ -389,7 +393,7 @@ input[type="radio"].visually-hidden {
     fill: #231f20;
 }
 
-/*hotel-search*/
+/*---------- hotel-search ----------*/
 .hotel-search {
     background-color: #ffffff; 
     position: absolute;
@@ -413,6 +417,16 @@ input[type="radio"].visually-hidden {
     height: 38px;
     padding: 0 13px;
 
+}
+
+.search-form-field:hover {
+    background-color: #ebebeb;
+}
+
+.search-form-field:focus {
+    background-color: #ffffff;
+    /*border: 2px solid #e5e5e5;*/
+    border-color: #e5e5e5;
 }
 
 .search-form-field.field-text {
@@ -486,15 +500,6 @@ TODO: упростить код. Общие стили убрать дублир
     justify-content: space-between;
 }
 
-.search-form-field:hover {
-    background-color: #ebebeb;
-}
-
-.search-form-field:focus {
-    background-color: #ffffff;
-    /*border: 2px solid #e5e5e5;*/
-    border-color: #e5e5e5;
-}
 
 .hotel-search-button-find {
     padding: 21px 196px;
@@ -527,11 +532,6 @@ TODO: упростить код. Общие стили убрать дублир
     background-color: #f2f2f2;
 }
 
-
-.hotel-search-button-calendar * {
-    fill: #cacaca;
-}
-
 .hotel-search-button-calendar:hover,
 .hotel-search-button-calendar:focus * {
     fill: #000000;
@@ -541,10 +541,8 @@ TODO: упростить код. Общие стили убрать дублир
     fill: #81b3d2;
 }
 
-
-/*Внутрення страница*/
-.site-navigation-current a {
-    color: #766357;
+.hotel-search-button-calendar * {
+    fill: #cacaca;
 }
 
 .appartment-item-header {
@@ -1045,34 +1043,14 @@ ToDo: Звёздочки
 }
 
 /*------------- Сеточные стили -------------*/
-.main-container {
-    background-color: #ffffff;
-}
 
-.main-header {
-    margin-bottom: 30px;
-}
 
-.advantage-list-caption {
-    margin-bottom: 50px;
-}
 
-.advantage-list {
-    margin: 0px;
-    padding: 0px;
-}
 
-/*
-.advantages {
-    margin-bottom: 55px;
-}
-*/
 
-.got-interested {
-    margin-top: 52px;
-    margin-bottom: 25px;
-    display: inline-block;
-}
+
+
+
 
 
 
@@ -1145,10 +1123,7 @@ ToDo: Звёздочки
     margin-left: auto;
 }
 
-.advantage-list {
-    display: flex;
-    flex-wrap: wrap;
-}
+
 
 
 .advantage-item:nth-child(1) {
@@ -1162,10 +1137,7 @@ ToDo: Звёздочки
     display: flex;
 }
 
-.advantage-item {
-    min-width: 400px;
-    min-height: 256px;    
-}
+
 
 
 
