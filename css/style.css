@@ -1,6 +1,9 @@
 /*
 ToDO: Проверить как выглядят странички в IE, Chrome, Firefox, Safari
 */
+/*
+    ToDo: Для IE почему появляются полосы прокрутки?
+*/
 body {
     margin: 0;
     padding: 0;
@@ -128,7 +131,6 @@ input[type="checkbox"].visually-hidden{
     text-align: right;
 }
 
-/*Внутренняя страница*/
 .site-navigation-current a {
     color: #766357;
 }
@@ -142,15 +144,23 @@ input[type="checkbox"].visually-hidden{
     margin-bottom: 25px;
 }
 /*---------- intro ----------*/
-/*ToDo: Для IE переделать background на after элемент*/
 .intro {
     background-color: #38484d;
-    background-image: url("../img/intro-polygon.svg"), url("../img/intro-background.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-position:  center bottom,  center top;
-    background-size: 100%, 100%;
+    background-image: url("../img/intro-background.jpg");
+    background-repeat:  no-repeat;
+    background-position:  center top;
+    background-size: 100%;
     text-align: center;
     margin-bottom: 60px;
+}
+
+.intro::after {
+    content: "";
+    display: block;
+    background-image: url("../img/intro-polygon.svg");
+    background-repeat:  no-repeat;
+    height: 57px;
+    width: 100%;
 }
 
 .intro img {
@@ -187,7 +197,12 @@ input[type="checkbox"].visually-hidden{
     text-align: center;
     background-color: #81b3d2;
     padding-top: 50px;    
-    
+}
+
+.advantage-item-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .advantage-item-description::after {
@@ -203,27 +218,41 @@ input[type="checkbox"].visually-hidden{
     top: 115px;
 }
 
-/* ToDo: Добавить класс для более гибкой стилизации */
 .advantage-item-description h3 {
-    max-width: 200px;
     margin: 0 auto;
     margin-bottom: 65px;
-
     font-size: 21px;
     line-height: 21px;
 }
 
+.main-advantage h3{
+    max-width: 151px;
+}
+
+.extra-advantage h3{
+    max-width: 160px;
+}
+
+.extra-advantage .advantage-item-info {
+    max-width: 255px;
+}
+
+.main-advantage .advantage-item-info {
+    max-width: 280px;
+}
 
 .advantage-item:nth-of-type(n+3) .advantage-item-description {
     color: #000000;
     background-color: #eeeeee;
 }
 
-/* ToDo: Обернуть во Flex box чтобы нижняя часть была к нижнему края блока */
 .advantage-item-info {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
+    margin-top: auto;
+    margin-bottom: 55px;
+    text-align: center;
 }
 
 .city-advantage-list {
@@ -272,7 +301,6 @@ input[type="checkbox"].visually-hidden{
     display: inline-block;    
 }
 
-/*ToDo: Какой тип блока по умолчанию у P ?*/
 .search p {
     color: #333333;
     font-weight: 400;
@@ -426,7 +454,7 @@ input[type="checkbox"].visually-hidden{
     width: 38px;    
 }
 
-.hotel-search-button-minus {
+.hotel-search-button {
     position: relative;
     padding: 0;
     height: 38px;
@@ -434,7 +462,7 @@ input[type="checkbox"].visually-hidden{
     background-color: #f2f2f2;
 }
 
-.hotel-search-button::before
+.hotel-search-button::before,
 .hotel-search-button-plus::after {
     content: "";
     display: block;
@@ -445,41 +473,25 @@ input[type="checkbox"].visually-hidden{
     background-color: #a9a9a9;
 }
 
-.hotel-search-button-plus {
-    position: relative;
-    padding: 0;
-    height: 38px;
-    width: 38px; 
-    background-color: #f2f2f2;
-}
-
-/*
-TODO: упростить код. Общие стили убрать дублирование
-*/
-.hotel-search-button-minus::before {
-    width: 12px;
-    height: 3px;
-}
-
-.hotel-search-button-plus::before, 
-.hotel-search-button-plus::after {
+.hotel-search-button::before {
     width: 12px;
     height: 3px;
 }
 
 .hotel-search-button-plus::after {
-    transform: rotate(90deg);
+    width: 3px;
+    height: 12px;
 }
-
 
 .hotel-search-button:hover::before,
-.hotel-search-button:focus::before {
+.hotel-search-button:hover::after,
+.hotel-search-button:focus::before,
+.hotel-search-button:focus::after {
     background-color: #000000;
 }
 
-.hotel-search-button-plus:active::before,
-.hotel-search-button-plus:active::after,
-.hotel-search-button-minus:active::before {
+.hotel-search-button:active::before,
+.hotel-search-button:active::after {
     background-color: #81b3d2;
 }
 
@@ -488,16 +500,14 @@ TODO: упростить код. Общие стили убрать дублир
     justify-content: space-between;
 }
 
-
 .hotel-search-button-find {
     padding: 21px 196px;
-
     font: inherit;
     font-size: 21px;
     text-transform: uppercase;
     color: #ffffff;
     background-color: #81b3d2;
-    margin-top: 54px;
+    margin-top: 26px;
 }
 
 .hotel-search-button-find:hover {
@@ -640,7 +650,6 @@ TODO: упростить код. Общие стили убрать дублир
 
 .filter-range-title {
     margin-bottom: 9px;
-  
     font-weight: 600;
     font-size: 16px;
     line-height: 21px;
@@ -649,12 +658,9 @@ TODO: упростить код. Общие стили убрать дублир
 
 .price-controls {
     position: relative;
-
     height: 36px;
     margin-bottom: 20px;
-  
     font-size: 0;
-
     border: 2px solid #ffffff;
     border-radius: 2px;
 }
@@ -662,24 +668,19 @@ TODO: упростить код. Общие стили убрать дублир
 .price-controls::after {
     content: "";
     position: absolute;
-
     top: 50%;
     left: 50%;
-
     width: 2px;
     height: 22px;
-  
     background: #ffffff;
     transform: translate(-50%, -50%);
-  }
+}
 
 .price-controls label {
     display: inline-block;
-  
     font-size: 14px;
     line-height: 38px;
     vertical-align: top;
-  
     cursor: pointer;
 }
 
@@ -692,23 +693,19 @@ TODO: упростить код. Общие стили убрать дублир
 .price-controls input {
     width: 50px;
     margin: 0;
-  
     color: inherit;
     font: inherit;
-  
     background: none;
     border: none;
 }
 
 .range-controls {
     position: relative;
-  
     margin-bottom: 32px;
 }
 
 .range-controls .scale {
     height: 2px;
-  
     background: rgba(255, 255, 255, 0.3);
 }
 
@@ -722,10 +719,8 @@ TODO: упростить код. Общие стили убрать дублир
 .range-toggle {
     position: absolute;
     top: -9px;
-
     width: 4px;
     height: 4px;
-  
     background: #ababab;
     border: 8px solid #ffffff;
     border-radius: 50%;
@@ -749,12 +744,10 @@ TODO: упростить код. Общие стили убрать дублир
     display: block;
     margin: 0 auto;
     padding: 6px 35px;
-  
     font-size: 14px;
     line-height: 20px;
     color: #ffffff;
     text-transform: uppercase;
-  
     background: transparent;
     border: 2px solid #ffffff;
     border-radius: 2px;
@@ -763,7 +756,6 @@ TODO: упростить код. Общие стили убрать дублир
 
 .search-button:hover {
     color: #000000;
-  
     background: #ffffff;
 }
 
@@ -797,7 +789,6 @@ TODO: упростить код. Общие стили убрать дублир
     min-width: 76px;
 }
 
-
 .result-sort-list-label {
     font-size: 12px;
     line-height: 21px;
@@ -818,7 +809,6 @@ TODO: упростить код. Общие стили убрать дублир
 .result-sort-item a:hover,
 .result-sort-item a:focus {
     color: #81b3d2;
-    
 }
 
 .result-sort-item a:active {
@@ -850,8 +840,6 @@ TODO: упростить код. Общие стили убрать дублир
 	border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 10px solid #cacaca;
-    /*border-top: 10px solid #81b3d2;*/
-
     margin-left: 12px;
     outline: none;
 }
@@ -871,7 +859,7 @@ TODO: упростить код. Общие стили убрать дублир
 }
  
 .triangle-down:active {
-     border-top-color: #81b3d2;
+    border-top-color: #81b3d2;
 } 
 
 /*------*/
@@ -922,49 +910,6 @@ TODO: упростить код. Общие стили убрать дублир
 }
 
  
-/*
-.rating-starts {
-    display: block;
-    width: 114px;
-    height: 17px;
-    margin: 0;
-    margin-top: 3px;
-    padding: 0;
-}
-
-.stars-1 {
-    background-image: url("../img/star.svg");  
-    background-repeat:   no-repeat;  
-    background-position:  96px 0 ;
-}
-
-.stars-2 {
-    background-image: url("../img/star.svg"), url("../img/star.svg");  
-    background-repeat:   no-repeat, no-repeat;  
-    background-position:  72px 0, 96px 0 ;
-}
-
-.stars-3 {
-    background-image:  url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg");  
-    background-repeat:  no-repeat, no-repeat, no-repeat;  
-    background-position:  48px 0, 72px 0, 96px 0 ;
-}
-
-.stars-4 {
-    background-image:  url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg");  
-    background-repeat:  no-repeat, no-repeat, no-repeat, no-repeat;  
-    background-position:  24px 0, 48px 0, 72px 0, 96px 0 ;
-}
-
-.stars-5 {
-    background-image: url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg"), url("../img/star.svg");  
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;  
-    background-position: 0 0, 24px 0, 48px 0, 72px 0, 96px 0 ;
-}
-*/
-/*
-ToDo: Звёздочки
-*/
 .rating-starts {
     display: block;
     background-image: url("../img/star.svg");
@@ -973,24 +918,24 @@ ToDo: Звёздочки
     margin: 0;
     margin-top: 3px;
     padding: 0;
-    background-repeat: repeat;
+    background-repeat: repeat-x;
     margin-left: auto;
 }
 
 .stars-1 {
-    width: 18px;
+    width: 24px;
 }
 .stars-2 {
-    width: 42px;
+    width: 48px;
 }
 .stars-3 {
-    width: 66px;
+    width: 72px;
 }
 .stars-4 {
-    width: 90px;
+    width: 96px;
 }
 .stars-5 {
-    width: 114px;
+    width: 120px;
 }
 .rating-digit {
     display: inline-block;
@@ -1001,14 +946,11 @@ ToDo: Звёздочки
     margin: 0;   
     margin-top: 48px; 
     font-weight: 400px;
-
 }
 
 .appartment-item {
     display: flex;    
     list-style: none;
-    /*padding-left: 72px;
-    padding-right: 72px;*/
     padding-top: 25px;
     padding-bottom: 30px;
     border-top: 1px solid #e5e5e5;
@@ -1042,6 +984,7 @@ ToDo: Звёздочки
     display: inline-block;
     min-width: 112px;
     margin-right: auto;
+    text-align: left;
 }
 
 /*
