@@ -50,8 +50,8 @@ input[type="checkbox"].visually-hidden{
 
 .background-container {
     position: relative;    
-    width: 1200px;  /*размер сайта*/
-    margin: 0 auto; /*центровка*/
+    width: 1200px; 
+    margin: 0 auto;
     box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2); 
 }
 
@@ -59,7 +59,6 @@ input[type="checkbox"].visually-hidden{
     display: inline-block;    
     padding: 10px 30px;    
     font: inherit;
-
     text-align: center;
     vertical-align: middle;
     text-transform: uppercase;
@@ -67,12 +66,15 @@ input[type="checkbox"].visually-hidden{
     outline: none;
 }
 
-/*ToDo: добавить элементам класс где есть падинги*/
 .container {
     padding: 0 72px;
 }
 
-/*ToDo: добавить класс который убирает паддинги у списков*/
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
 /*---------- Navigation ----------*/
 .site-header{
@@ -81,6 +83,8 @@ input[type="checkbox"].visually-hidden{
 
 .main-navigation {
     position: relative;
+    padding-top: 13px;
+    padding-bottom: 15px;
 }
 
 .navigation-logo {
@@ -90,13 +94,8 @@ input[type="checkbox"].visually-hidden{
 }
 
 .site-navigation {
-    list-style: none;
-    margin: 0px;
-    /*padding: 0 72px;*/
     display: flex;
     align-items: center;
-    /*временно для сетки*/
-    min-height: 55px;
 }
 
 .site-navigation a {
@@ -135,12 +134,12 @@ input[type="checkbox"].visually-hidden{
 }
 
 /*---------- Main content ----------*/
-.main-container {
+.main {
     background-color: #ffffff;
 }
 
 .main-header {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 /*---------- intro ----------*/
 /*ToDo: Для IE переделать background на after элемент*/
@@ -156,7 +155,7 @@ input[type="checkbox"].visually-hidden{
 
 .intro img {
     margin-top: 76px;
-    margin-bottom: 79px;
+    margin-bottom: 74px;
 }
 
 /*---------- advantages----------*/
@@ -168,11 +167,8 @@ input[type="checkbox"].visually-hidden{
 }
 
 .advantage-list {
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
-    margin: 0px;
-    padding: 0px;        
 }
 
 .advantage-item {
@@ -234,10 +230,6 @@ input[type="checkbox"].visually-hidden{
     display: flex;
     min-width: 400px;
     min-height: 330px;
-
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
 }
 
 .city-advantage-item {
@@ -316,7 +308,9 @@ input[type="checkbox"].visually-hidden{
     left: 0;
     box-sizing: border-box;
     min-width: 1200px;
-    padding: 36px 73px;
+    /*padding: 36px 73px;*/
+    padding-top: 36px;
+    padding-bottom: 36px;
     display: flex;
     background-color: rgba(255, 255, 255, 0.9);    
 }
@@ -357,13 +351,8 @@ input[type="checkbox"].visually-hidden{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 150px;
-    margin-top: 0;
     margin-right: auto;
-    padding: 0;
-    list-style: none;
 }
-
-
 
 .social-button {
     display: flex;
@@ -371,7 +360,6 @@ input[type="checkbox"].visually-hidden{
     justify-content: center;
     width: 46px;
     height: 48px;
-
     background-color: #81b3d2;
 }
 
@@ -576,12 +564,6 @@ TODO: упростить код. Общие стили убрать дублир
     font-size: 16px;
     line-height: 21px;
     color: #ffffff;
-}
-
-.search-form ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .search-option {
@@ -843,10 +825,6 @@ TODO: упростить код. Общие стили убрать дублир
     color: #000000;
 }
 
-.result-sort-list {
-    list-style: none;
-}
-
 .result-sort-item a {
     color: rgba(0, 0, 0, 0.3);
 }
@@ -1015,7 +993,6 @@ ToDo: Звёздочки
     width: 114px;
 }
 .rating-digit {
-
     display: inline-block;
     color: #666666;
     background-color: #f2f2f2;
@@ -1030,8 +1007,8 @@ ToDo: Звёздочки
 .appartment-item {
     display: flex;    
     list-style: none;
-    padding-left: 72px;
-    padding-right: 72px;
+    /*padding-left: 72px;
+    padding-right: 72px;*/
     padding-top: 25px;
     padding-bottom: 30px;
     border-top: 1px solid #e5e5e5;
@@ -1042,19 +1019,7 @@ ToDo: Звёздочки
     border-bottom: 1px solid #e5e5e5;    
 }
 
-/*------------- Сеточные стили -------------*/
-
-
-
-
-
-
-
-
-
-
-
-/*--------------- search form */
+/*--------------- search form ---------------*/
 .hotel-search {
     box-sizing: border-box;
     width: 570px;
@@ -1073,27 +1038,19 @@ ToDo: Звёздочки
     padding: 0;
 }
  
-
 .hotel-search-item label {
     display: inline-block;
-    min-width: 112px; /*???*/
+    min-width: 112px;
     margin-right: auto;
 }
 
-
-
+/*
+ToDo: Убрать все Min-width, для сетки
+*/
 .appartments {
-
     /*временно для сетки*/
     min-width: 455px;
 }
-
-.appartment-list {
-    padding: 0;
-    margin: 0;
-}
-
-
 
 .appartment-item-image {
     margin-top: 5px;
@@ -1123,37 +1080,11 @@ ToDo: Звёздочки
     margin-left: auto;
 }
 
-
-
-
 .advantage-item:nth-child(1) {
     display: flex;
     flex-wrap: wrap;
 }
 
-
-
 .advantage-item:nth-child(2) {
     display: flex;
 }
-
-
-
-
-
-/*временные стили для сетки*/
-/*body > * {
-    background: rgba(255, 0, 0, 0.3);
-}
-
-body > * > * {
-    background: rgba(255, 0, 255, 0.3);
-}
-
-body > * > * > * {
-    background: rgba(255, 255, 0, 0.3);
-}
-
-body > * > * > * > *{
-    background: rgba(0, 255, 0, 0.3);
-}*/
