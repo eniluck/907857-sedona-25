@@ -1078,3 +1078,8 @@ input[type="checkbox"].visually-hidden{
     animation-name: shake;
     animation-duration: 0.6s;
 }
+
+.map {
+    background-image: url("../img/map.jpg");
+    min-height: 594px;
+}
