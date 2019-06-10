@@ -573,13 +573,16 @@ input[type="checkbox"].visually-hidden{
     margin-bottom: 20px;
 }
 
+.search-option:not(:last-child) {
+    margin-bottom: 25px;
+}
+
 .search-option {
     position: relative;
     font-size: 14px;
     line-height: 21px;
     color: #ffffff;
     padding-left: 40px;
-    margin-bottom: 25px;
 }
 
 .search-input + label:before{
@@ -630,12 +633,18 @@ input[type="checkbox"].visually-hidden{
 
 .column-cost {
     margin-left: auto;
-    min-width: 328px;
+    /*min-width: 328px;*/
+    margin-top: -3px;
 }
 
+
 /*стили range фильтра с двумя кнопками*/
+.column-cost legend{
+    margin-bottom: 10px;
+}
+
 .filter-range {
-    width: 320px;
+    width: 317px;
     color: #ffffff;
     font-weight: 400;
 }
@@ -650,7 +659,7 @@ input[type="checkbox"].visually-hidden{
 
 .price-controls {
     position: relative;
-    height: 36px;
+    height: 32px;
     margin-bottom: 20px;
     font-size: 0;
     border: 2px solid #ffffff;
@@ -671,7 +680,7 @@ input[type="checkbox"].visually-hidden{
 .price-controls label {
     display: inline-block;
     font-size: 14px;
-    line-height: 38px;
+    line-height: 32px;
     vertical-align: top;
     cursor: pointer;
 }
@@ -679,7 +688,14 @@ input[type="checkbox"].visually-hidden{
 .price-controls .min-price,
 .price-controls .max-price {
     width: 90px;
+}
+
+.price-controls .min-price {
     padding-left: 65px;
+}
+
+.price-controls .max-price {
+    padding-left: 56px;
 }
 
 .search-input {
@@ -735,8 +751,9 @@ input[type="checkbox"].visually-hidden{
 
 .search-button {
     display: block;
-    margin: 0 auto;
-    padding: 6px 35px;
+    /*margin: 0 auto;*/
+    margin-left: 84px;
+    padding: 6px 34px;
     font-size: 14px;
     line-height: 20px;
     color: #ffffff;
@@ -757,6 +774,7 @@ input[type="checkbox"].visually-hidden{
     background-color: #fefefe;
     display: flex;
     align-items: center;
+    min-height: 88px;
 }
 
 .result-found {
