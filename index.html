@@ -278,7 +278,15 @@
         </p> 
       </footer>
     </div>
+    <script>
+      var searchForm = document.querySelector('.hotel-search');
+      var buttonSearch = document.querySelector('.button-search');
+      console.log(buttonSearch);
 
-    
+      buttonSearch.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        searchForm.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
