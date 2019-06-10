@@ -6,6 +6,9 @@ buttonSearch.addEventListener('click', function (evt) {
   searchFormWindow.classList.toggle('hidden');
   if (searchFormWindow.classList.contains('hidden')) {
     searchFormWindow.classList.remove('hotel-search-show');
+    setTimeout(function() {
+        searchFormWindow.classList.remove('hotel-search-show');
+    }, 1000);
   } else {
     searchFormWindow.classList.add('hotel-search-show');
   }
