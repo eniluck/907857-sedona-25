@@ -1079,7 +1079,20 @@ input[type="checkbox"].visually-hidden{
     animation-duration: 0.6s;
 }
 
-.map {
-    background-image: url("../img/map.jpg");
-    min-height: 594px;
+.map iframe {
+    position: relative;
+    z-index: 2;
+  
+    border: none;
+}
+
+.map img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hotel-search {
+    z-index: 3;
 }
