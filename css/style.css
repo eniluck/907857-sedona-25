@@ -416,13 +416,7 @@ input[type="checkbox"].visually-hidden{
 }
 
 /*---------- hotel-search ----------*/
-.hotel-search {
-    background-color: #ffffff; 
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+
 
 .hotel-search-form {
     text-align: center;
@@ -986,7 +980,10 @@ input[type="checkbox"].visually-hidden{
     box-sizing: border-box;
     width: 570px;
     padding: 55px;
-    margin: 0 auto;
+    background-color: #ffffff; 
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 570px /2 );
 }
 
 .hotel-search-line {
@@ -1051,3 +1048,21 @@ input[type="checkbox"].visually-hidden{
 .advantage-item:nth-child(2) {
     display: flex;
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.hotel-search-show {
+    animation: pulse;
+    animation-duration: 0.8s;
+}
+ 

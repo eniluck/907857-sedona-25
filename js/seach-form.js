@@ -4,6 +4,11 @@ var buttonSearch = document.querySelector('.button-search');
 buttonSearch.addEventListener("click", function (evt) {
   evt.preventDefault();
   searchFormWindow.classList.toggle("hidden");
+  if (searchFormWindow.classList.contains("hidden")) {
+    searchFormWindow.classList.remove("hotel-search-show");
+  } else {
+    searchFormWindow.classList.add("hotel-search-show");
+  }
 });
 
 var searchForm = document.querySelector('.hotel-search-form');
