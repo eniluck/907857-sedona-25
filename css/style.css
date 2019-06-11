@@ -11,10 +11,6 @@ ToDO: Проверить как выглядят странички в IE, Chrom
 /*
 Todo: Пропустить файл через автопрефиксер
 */
-/*
-Убрать все записи: временно для сетки
-и закомментированные записи
-*/
 body {
     margin: 0;
     padding: 0;
@@ -172,7 +168,6 @@ input[type="checkbox"].visually-hidden{
     background-size: 100%;
     text-align: center;
     margin-bottom: 60px;
-    /*position: relative;*/
 }
 
 .intro::after {
@@ -436,8 +431,6 @@ input[type="checkbox"].visually-hidden{
 }
 
 /*---------- hotel-search ----------*/
-
-
 .hotel-search-form {
     text-align: center;
 }
@@ -768,7 +761,6 @@ input[type="checkbox"].visually-hidden{
 
 .search-button {
     display: block;
-    /*margin: 0 auto;*/
     margin-left: 84px;
     padding: 6px 34px;
     font-size: 14px;
@@ -1030,11 +1022,6 @@ input[type="checkbox"].visually-hidden{
 
 .hotel-search-item.search-children label{
     margin-left: 48px;    
-}
-
-.appartments {
-    /*временно для сетки*/
-    min-width: 455px;
 }
 
 .appartment-item-image {
