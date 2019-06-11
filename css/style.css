@@ -953,6 +953,7 @@ input[type="checkbox"].visually-hidden{
 
 .button-detail:active {
     background-color: #5496bd;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .button-booking {
@@ -969,6 +970,7 @@ input[type="checkbox"].visually-hidden{
 
 .button-booking:active {
     background-color: #503e33;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .rating-starts {
