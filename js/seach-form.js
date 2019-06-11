@@ -1,6 +1,8 @@
 var searchFormWindow = document.querySelector('.hotel-search');
 var buttonSearch = document.querySelector('.button-search');
 
+searchFormWindow.classList.toggle('hidden');
+
 buttonSearch.addEventListener('click', function (evt) {
   evt.preventDefault();
   searchFormWindow.classList.toggle('hidden');
