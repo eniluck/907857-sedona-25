@@ -4,6 +4,23 @@ ToDO: Проверить как выглядят странички в IE, Chrom
 /*
     ToDo: Для IE почему появляются полосы прокрутки?
 */
+/*
+    Todo: посмотреть почему появляется полоска в интро. Скорее всего по каким то параметрам background
+    https://clip2net.com/s/421g55h
+*/
+/*
+    ToDo: блок по центру https://c2n.me/421g8yG
+*/
+/*
+При использовании блочно-строчных элементов явно указывайте вертикальное выравнивание
+display: inline-block
+vertical-align
+Пересмотреть лекцию на этот счёт
+*/
+/*
+Пересмотреть на счёт br
+https://up.htmlacademy.ru/htmlcss/25/examples_br#sedona
+*/
 body {
     margin: 0;
     padding: 0;
@@ -151,7 +168,9 @@ input[type="checkbox"].visually-hidden{
 }
 
 .main-header {
-    margin-bottom: 25px;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-bottom: 25px;    
 }
 /*---------- intro ----------*/
 .intro {
@@ -162,6 +181,7 @@ input[type="checkbox"].visually-hidden{
     background-size: 100%;
     text-align: center;
     margin-bottom: 60px;
+    /*position: relative;*/
 }
 
 .intro::after {
@@ -169,13 +189,14 @@ input[type="checkbox"].visually-hidden{
     display: block;
     background-image: url("../img/intro-polygon.svg");
     background-repeat:  no-repeat;
-    height: 57px;
-    width: 100%;
+    background-position: 0px 2px;
+    min-height: 59px;
+    min-width: 1200px;
 }
 
 .intro img {
     margin-top: 76px;
-    margin-bottom: 17px;
+    margin-bottom: 15px;
 }
 
 /*---------- advantages----------*/
@@ -183,7 +204,7 @@ input[type="checkbox"].visually-hidden{
     color: #333333;
     text-align: center;
     font-weight: 400;
-    margin-bottom: 50px;    
+    margin-bottom: 52px;    
 }
 
 .advantage-list {
@@ -204,7 +225,7 @@ input[type="checkbox"].visually-hidden{
     color: #ffffff;
     text-align: center;
     background-color: #81b3d2;
-    padding-top: 50px;    
+    padding-top: 47px;    
 }
 
 .advantage-item-description {
@@ -247,7 +268,7 @@ input[type="checkbox"].visually-hidden{
 }
 
 .main-advantage .advantage-item-info {
-    max-width: 280px;
+    max-width: 305px;
 }
 
 .advantage-item:nth-of-type(n+3) .advantage-item-description {
@@ -274,6 +295,7 @@ input[type="checkbox"].visually-hidden{
     background-repeat: no-repeat;
     background-position: center 60px;
     text-align: center;
+    width: 400px;
 }
 
 .city-advantage-item:nth-child(1) {
@@ -290,11 +312,15 @@ input[type="checkbox"].visually-hidden{
 
 .city-advantage-item h4 {
     font-size: 21px;
-    margin-top: 166px;
+    margin-top: 159px;
+    margin-bottom: 22px;
 }
 
 .city-advantage-item p {
     font-weight: 400;
+    width: 300px;
+    margin: 0 auto;
+    line-height: 21px;
 }    
 
 /*---------- search ----------*/
@@ -314,7 +340,8 @@ input[type="checkbox"].visually-hidden{
     color: #333333;
     font-weight: 400;
     margin-top: 0;
-    margin-bottom: 41px;    
+    margin-bottom: 45px;
+    line-height: 24px;
 }
 
 .button.button-search {
@@ -349,6 +376,7 @@ input[type="checkbox"].visually-hidden{
     padding-bottom: 36px;
     display: flex;
     background-color: rgba(255, 255, 255, 0.9);    
+    z-index: 4;
 }
 
 .inner-page .site-footer {
@@ -583,7 +611,7 @@ input[type="checkbox"].visually-hidden{
     padding-left: 40px;
 }
 
-.search-input + label:before{
+.search-input + label::before{
     content:"";
     display: block;
     position: absolute;
@@ -594,7 +622,7 @@ input[type="checkbox"].visually-hidden{
     background-repeat: no-repeat;
 }
 
-.search-input:checked + label:before {
+.search-input:checked + label::before {
     background-image: url("../img/checkbox-on.svg");
 }
 
