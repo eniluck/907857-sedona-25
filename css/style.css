@@ -358,16 +358,12 @@ input[type="checkbox"].visually-hidden{
     position: absolute;
     bottom: 0;
     left: 0;
-    
     display: flex;
     align-items: flex-start;
-
-
     box-sizing: border-box;
     min-width: 1200px;
-    padding-top: 30px;
+    padding-top: 35px;
     padding-bottom: 20px;
-
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 4;
     min-height: 120px;
@@ -395,9 +391,7 @@ input[type="checkbox"].visually-hidden{
     justify-content: center;
     width: 251px;
     padding: 0;
-    text-align: right;
-    vertical-align: top;
-    margin: 0px;    
+    margin: 0px;
     padding-top: 4px;
 }
 
@@ -490,7 +484,7 @@ input[type="checkbox"].visually-hidden{
     position: relative;
     padding: 0;
     height: 38px;
-    width: 38px; 
+    width: 38px;
     background-color: #f2f2f2;
 }
 
@@ -590,6 +584,7 @@ input[type="checkbox"].visually-hidden{
 .search-appartment {
     background-color: #81b3d2;
     background-image: url("../img/filter-background.jpg");
+    background-size: 100%;
     padding-top: 28px;
     padding-bottom: 31px;
 }
