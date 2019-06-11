@@ -9,13 +9,10 @@ ToDO: Проверить как выглядят странички в IE, Chrom
     https://clip2net.com/s/421g55h
 */
 /*
-    ToDo: блок по центру https://c2n.me/421g8yG
+Todo: Пропустить файл через автопрефиксер
 */
 /*
-При использовании блочно-строчных элементов явно указывайте вертикальное выравнивание
-display: inline-block
-vertical-align
-Пересмотреть лекцию на этот счёт
+Убрать все записи: /*временно для сетки*/
 */
 body {
     margin: 0;
@@ -35,11 +32,6 @@ body {
 
 a {
     text-decoration: none;
-}
-
-h1 {
-    text-align: center;
-    font-size: 21px;
 }
 
 img {
@@ -65,16 +57,16 @@ input[type="checkbox"].visually-hidden{
 }
 
 .background-container {
-    position: relative;    
+    position: relative;
     width: 1200px; 
     margin: 0 auto;
-    box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2); 
+    box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
 }
 
 .button {
-    display: inline-block;    
-    vertical-align: middle;    
-    padding: 10px 30px;    
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 30px;
     font: inherit;
     text-align: center;
     text-transform: uppercase;
@@ -166,7 +158,9 @@ input[type="checkbox"].visually-hidden{
 .main-header {
     max-width: 450px;
     margin: 0 auto;
-    margin-bottom: 25px;    
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 21px;
 }
 /*---------- intro ----------*/
 .intro {
@@ -200,7 +194,7 @@ input[type="checkbox"].visually-hidden{
     color: #333333;
     text-align: center;
     font-weight: 400;
-    margin-bottom: 52px;    
+    margin-bottom: 52px;
 }
 
 .advantage-list {
@@ -210,7 +204,7 @@ input[type="checkbox"].visually-hidden{
 
 .advantage-item {
     min-width: 400px;
-    min-height: 256px;    
+    min-height: 256px;
 }
 
 .advantage-item-description {
@@ -221,7 +215,7 @@ input[type="checkbox"].visually-hidden{
     color: #ffffff;
     text-align: center;
     background-color: #81b3d2;
-    padding-top: 47px;    
+    padding-top: 47px;
 }
 
 .advantage-item-description {
@@ -233,7 +227,7 @@ input[type="checkbox"].visually-hidden{
 .advantage-item-description::after {
     display: block;
     width: 100%;
-    counter-increment: block-number; 
+    counter-increment: block-number;
     content: "— №"counter(block-number)" —";
     font-weight: 400;
     font-size: 14px;
@@ -295,15 +289,15 @@ input[type="checkbox"].visually-hidden{
 }
 
 .city-advantage-item:nth-child(1) {
-    background-image: url("../img/icon-house.svg");    
+    background-image: url("../img/icon-house.svg");
 }
 
 .city-advantage-item:nth-child(2) {
-    background-image: url("../img/icon-burger.svg");    
+    background-image: url("../img/icon-burger.svg");
 }
 
 .city-advantage-item:nth-child(3) {
-    background-image: url("../img/icon-present.svg");    
+    background-image: url("../img/icon-present.svg");
 }
 
 .city-advantage-item h4 {
@@ -372,17 +366,17 @@ input[type="checkbox"].visually-hidden{
     padding-top: 36px;
     padding-bottom: 36px;
     display: flex;
-    background-color: rgba(255, 255, 255, 0.9);    
+    background-color: rgba(255, 255, 255, 0.9);
     z-index: 4;
 }
 
 .inner-page .site-footer {
-    position: static;    
+    position: static;
 }
 
 .footer-hashtag {
     font-size: 21px;
-    text-align: center;    
+    text-align: center;
     padding: 0;
     margin: 0;
     margin-top: 10px;
@@ -462,7 +456,7 @@ input[type="checkbox"].visually-hidden{
     font: inherit;
     text-transform: uppercase;
     background-color: #f2f2f2;
-    border: 2px solid transparent; 
+    border: 2px solid transparent;
     height: 38px;
     padding: 0 13px;
 }
@@ -477,7 +471,7 @@ input[type="checkbox"].visually-hidden{
 }
 
 .search-form-field.field-text {
-    width: 308px;    
+    width: 308px;
 }
 
 .search-form-field.field-number {
@@ -746,7 +740,6 @@ input[type="checkbox"].visually-hidden{
 .range-controls .bar {
     width: 80%;
     height: 2px;
-  
     background: #ffffff;
 }
 
@@ -817,7 +810,7 @@ input[type="checkbox"].visually-hidden{
 .result-sort-item {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 33px;  
+    margin-left: 33px;
 }
 
 .result-found {
@@ -835,7 +828,7 @@ input[type="checkbox"].visually-hidden{
 }
 
 .result-sort-item:not(.active) a {
-    border-bottom: 1px dashed #81b3d2;    
+    border-bottom: 1px dashed #81b3d2;
 }
 
 .result-sort-item a {
@@ -991,12 +984,12 @@ input[type="checkbox"].visually-hidden{
     padding-left: 16px;
     padding-right: 12px;
     margin: 0;   
-    margin-top: 48px; 
+    margin-top: 48px;
     font-weight: 400px;
 }
 
 .appartment-item {
-    display: flex;    
+    display: flex;
     list-style: none;
     padding-top: 25px;
     padding-bottom: 30px;
@@ -1005,7 +998,7 @@ input[type="checkbox"].visually-hidden{
 }
 
 .appartment-item:last-child {
-    border-bottom: 1px solid #e5e5e5;    
+    border-bottom: 1px solid #e5e5e5;
 }
 
 /*--------------- search form ---------------*/
@@ -1013,7 +1006,7 @@ input[type="checkbox"].visually-hidden{
     box-sizing: border-box;
     width: 570px;
     padding: 55px;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     position: absolute;
     top: 0px;
     left: calc(50% - 570px /2 );
@@ -1102,9 +1095,15 @@ input[type="checkbox"].visually-hidden{
 }
  
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
-    20%, 40%, 60%, 80% { transform: translateX(10px); }
+    0%, 100% { 
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% { 
+        transform: translateX(-10px);
+    }
+    20%, 40%, 60%, 80% { 
+        transform: translateX(10px);
+    }
 }
 
 .hotel-search-error {
