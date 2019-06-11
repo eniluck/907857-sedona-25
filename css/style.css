@@ -115,9 +115,11 @@ input[type="checkbox"].visually-hidden{
 
 .site-navigation a {
     color: #000000;
+    outline: none;
 }
 
-.site-navigation a:hover {
+.site-navigation a:hover,
+.site-navigation a:focus {
     color: #81b3d2;
 }
 
@@ -339,7 +341,8 @@ input[type="checkbox"].visually-hidden{
     background-color: #766357;
 }
 
-.button-search:hover {
+.button-search:hover,
+.button-search:focus {
     background-color: #604e43;
 }
 
@@ -432,6 +435,10 @@ input[type="checkbox"].visually-hidden{
 
 .social-button:active path{
     fill: #5496bd;
+}
+
+.logo-name {
+    outline: none;
 }
 
 .logo-name path { 
@@ -541,9 +548,10 @@ input[type="checkbox"].visually-hidden{
     margin-top: 26px;
 }
 
-.hotel-search-button-find:hover {
+.hotel-search-button-find:hover,
+.hotel-search-button-find:focus {
     background-color: #669ec0;
-}
+}   
 
 .hotel-search-button-find:active {
     color: rgba(0, 0, 0, 0.3);
@@ -622,6 +630,10 @@ input[type="checkbox"].visually-hidden{
     line-height: 21px;
     color: #ffffff;
     padding-left: 40px;
+}
+
+.search-input:focus + label{
+    outline: 1px solid #1c4f80;
 }
 
 .search-input + label::before{
@@ -813,7 +825,8 @@ input[type="checkbox"].visually-hidden{
     cursor: pointer;
 }
 
-.search-button:hover {
+.search-button:hover,
+.search-button:focus {
     color: #000000;
     background: #ffffff;
 }
@@ -890,6 +903,10 @@ input[type="checkbox"].visually-hidden{
     color: #81b3d2;
 }
 
+.result-sort-item.active a:focus {
+    outline: 1px solid #1c4f80;
+}
+
 .triangle-up {
     display: inline-block;
     vertical-align: middle;
@@ -932,6 +949,11 @@ input[type="checkbox"].visually-hidden{
 .triangle-down.active {
     border-top-color: #81b3d2;
 } 
+
+.triangle-up.active:focus,
+.triangle-down.active:focus {
+    outline: 1px solid #1c4f80;
+}
 
 /*------*/
 .appartment-type,
