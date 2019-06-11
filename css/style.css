@@ -412,6 +412,7 @@ input[type="checkbox"].visually-hidden{
 }
 
 .footer-copyright-text {
+    font-weight: 400;
     margin-top: 6px;
     margin-right: 8px;
 }
@@ -1152,7 +1153,7 @@ input[type="checkbox"].visually-hidden{
 }
  
 @keyframes shake {
-    0%, 100% { 
+    0%, 100% {
         transform: translateX(0);
     }
     10%, 30%, 50%, 70%, 90% { 
