@@ -852,7 +852,7 @@ input[type="checkbox"].visually-hidden{
     font-weight: 400;
 }
 
-.result-sort-item:not(.active) a {
+.result-sort-item:not(.active) a:not(:active) {
     border-bottom: 1px dashed #81b3d2;
 }
 
@@ -908,7 +908,8 @@ input[type="checkbox"].visually-hidden{
    border-bottom-color: #000000;
 }
 
-.triangle-up:active {
+.triangle-up:active,
+.triangle-up.active {
     border-bottom-color: #81b3d2;
 }
 
@@ -917,7 +918,8 @@ input[type="checkbox"].visually-hidden{
     border-top-color: #000000;
 }
  
-.triangle-down:active {
+.triangle-down:active,
+.triangle-down.active {
     border-top-color: #81b3d2;
 } 
 
