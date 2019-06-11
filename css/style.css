@@ -9,7 +9,7 @@ ToDO: Проверить как выглядят странички в IE, Chrom
     https://clip2net.com/s/421g55h
 */
 /*
-Todo: Пропустить файл через автопрефиксер
+    Todo: Пропустить файл через автопрефиксер
 */
 body {
     margin: 0;
@@ -571,12 +571,18 @@ input[type="checkbox"].visually-hidden{
     font-size: 21px;
 }
 
-.appartment-item-header:hover {
+.appartment-item-header a {
+    text-decoration: none;
+    color: #000000;
+    outline: none;
+}
+
+.appartment-item-header a:hover,
+.appartment-item-header a:focus {
     color: #81b3d2;
 }
 
-.appartment-item-header:active,
-.appartment-item-header:focus {
+.appartment-item-header a:active {
     color: rgba(0, 0, 0, 0.3);
 }
 
@@ -925,12 +931,12 @@ input[type="checkbox"].visually-hidden{
     margin-right: 4px;
 }
 
-.button-detail:hover {
+.button-detail:hover,
+.button-detail:focus {
     background-color: #669ec0;
 }
 
-.button-detail:active,
-.button-detail:focus {
+.button-detail:active {
     background-color: #5496bd;
 }
 
@@ -941,12 +947,12 @@ input[type="checkbox"].visually-hidden{
     margin: 0px;
 }
 
-.button-booking:hover {
+.button-booking:hover,
+.button-booking:focus {
     background-color: #604e43;
 }
 
-.button-booking:active,
-.button-booking:focus {
+.button-booking:active {
     background-color: #503e33;
 }
 
