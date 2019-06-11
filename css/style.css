@@ -356,6 +356,7 @@ input[type="checkbox"].visually-hidden{
     position: relative;
 }
 
+
 /*---------- Footer ----------*/
 .site-footer {
     position: absolute;
@@ -1172,6 +1173,7 @@ input[type="checkbox"].visually-hidden{
     z-index: 2;
   
     border: none;
+    width: 100%;
 }
 
 .map img {
