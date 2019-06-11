@@ -629,6 +629,19 @@ input[type="checkbox"].visually-hidden{
     background-image: url("../img/checkbox-on.svg");
 }
 
+.search-input:disabled + label::before {
+    background-image: url("../img/checkbox-off-disabled.svg");    
+    color: #6a6a6a;
+}
+
+.search-input:disabled + label {
+    color: #6a6a6a;
+}
+
+.search-input:checked:disabled + label::before {
+    background-image: url("../img/checkbox-on-disabled.svg");    
+}
+
 .search-input-number {
     font: inherit;
     font-weight: 400;
