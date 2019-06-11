@@ -46,7 +46,6 @@ arrivalDate.focus();
 searchForm.addEventListener('submit', function(evt) {
   if(!arrivalDate.value || !departureDate.value) {
     evt.preventDefault();
-    console.log('Нужно ввести дату заезда и дата выезда');
     
     searchFormWindow.classList.add('hotel-search-error');
     setTimeout(function() {
