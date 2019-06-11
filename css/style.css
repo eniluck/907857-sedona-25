@@ -817,7 +817,11 @@ input[type="checkbox"].visually-hidden{
 .result-sort-item {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 33px;
+    margin-left: 29px;
+}
+
+.result-sort-item:nth-child(1) {
+    margin-left: 38px;
 }
 
 .result-found {
@@ -1051,7 +1055,7 @@ input[type="checkbox"].visually-hidden{
 
 .appartment-item-header {
     margin-top: 0;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .appartment-info {
