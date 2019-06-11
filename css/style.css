@@ -13,6 +13,7 @@ Todo: Пропустить файл через автопрефиксер
 */
 /*
 Убрать все записи: временно для сетки
+и закомментированные записи
 */
 body {
     margin: 0;
@@ -580,7 +581,7 @@ input[type="checkbox"].visually-hidden{
 .search-appartment {
     background-color: #81b3d2;
     background-image: url("../img/filter-background.jpg");
-    padding-top: 31px;
+    padding-top: 28px;
     padding-bottom: 31px;
 }
 
@@ -588,7 +589,7 @@ input[type="checkbox"].visually-hidden{
     font-size: 16px;
     line-height: 21px;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .search-option:not(:last-child) {
@@ -651,8 +652,6 @@ input[type="checkbox"].visually-hidden{
 
 .column-cost {
     margin-left: auto;
-    /*min-width: 328px;*/
-    margin-top: -3px;
 }
 
 
