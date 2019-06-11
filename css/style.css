@@ -434,9 +434,19 @@ input[type="checkbox"].visually-hidden{
     fill: #5496bd;
 }
 
-.logo-name * { 
+.logo-name path { 
     fill: #231f20;
 }
+
+.logo-name:hover path,
+.logo-name:focus path { 
+    fill: #81b3d2;
+}
+
+.logo-name:active path { 
+    fill: #bdbbbc;
+}
+
 
 /*---------- hotel-search ----------*/
 .hotel-search-form {
@@ -552,7 +562,7 @@ input[type="checkbox"].visually-hidden{
     background-color: #f2f2f2;
 }
 
-.hotel-search-button-calendar:hover,
+.hotel-search-button-calendar:hover *,
 .hotel-search-button-calendar:focus * {
     fill: #000000;
 }
