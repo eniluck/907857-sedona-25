@@ -17,10 +17,6 @@ display: inline-block
 vertical-align
 Пересмотреть лекцию на этот счёт
 */
-/*
-Пересмотреть на счёт br
-https://up.htmlacademy.ru/htmlcss/25/examples_br#sedona
-*/
 body {
     margin: 0;
     padding: 0;
@@ -77,10 +73,10 @@ input[type="checkbox"].visually-hidden{
 
 .button {
     display: inline-block;    
+    vertical-align: middle;    
     padding: 10px 30px;    
     font: inherit;
     text-align: center;
-    vertical-align: middle;
     text-transform: uppercase;
     border: none;
     outline: none;
@@ -333,7 +329,8 @@ input[type="checkbox"].visually-hidden{
     line-height: 36px;
     margin-top: 52px;
     margin-bottom: 25px;
-    display: inline-block;    
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .search p {
@@ -552,6 +549,7 @@ input[type="checkbox"].visually-hidden{
     height: 38px;
     width: 38px;
     display: inline-flex;
+    vertical-align: middle;
     align-items: center;
     justify-content: center;
     vertical-align: bottom;
@@ -705,6 +703,7 @@ input[type="checkbox"].visually-hidden{
 
 .price-controls label {
     display: inline-block;
+    vertical-align: middle;
     font-size: 14px;
     line-height: 32px;
     vertical-align: top;
@@ -805,6 +804,7 @@ input[type="checkbox"].visually-hidden{
 
 .result-found {
     display: inline-block;
+    vertical-align: middle;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
@@ -815,7 +815,8 @@ input[type="checkbox"].visually-hidden{
 }
 
 .result-sort-item {
-    display: inline-block;  
+    display: inline-block;
+    vertical-align: middle;
     margin-left: 33px;  
 }
 
@@ -863,6 +864,7 @@ input[type="checkbox"].visually-hidden{
 
 .triangle-up {
     display: inline-block;
+    vertical-align: middle;
 	width: 0;
 	height: 0;
 	border-left: 5px solid transparent;
@@ -873,6 +875,7 @@ input[type="checkbox"].visually-hidden{
 
 .triangle-down {
     display: inline-block;
+    vertical-align: middle;
 	width: 0;
 	height: 0;
 	border-left: 5px solid transparent;
@@ -910,6 +913,7 @@ input[type="checkbox"].visually-hidden{
 
 .appartment-type {
     display: inline-block;
+    vertical-align: middle;
     min-width: 110px;
     margin-right: 2px;
 }
@@ -981,6 +985,7 @@ input[type="checkbox"].visually-hidden{
 
 .rating-digit {
     display: inline-block;
+    vertical-align: middle;
     color: #666666;
     background-color: #f2f2f2;
     padding-left: 16px;
