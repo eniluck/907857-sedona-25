@@ -232,14 +232,14 @@ input[type="checkbox"].visually-hidden{
     font-size: 14px;
     line-height: 21px;
     position: absolute;
-    top: 50%;
+    top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .advantage-item-description h3 {
     margin: 0 auto;
-    margin-bottom: 65px;
+    /*margin-bottom: 65px;*/
     font-size: 21px;
     line-height: 21px;
 }
@@ -248,7 +248,12 @@ input[type="checkbox"].visually-hidden{
     max-width: 151px;
 }
 
-.extra-advantage h3{
+.extra-advantage {
+    color: #000000;
+    background-color: #eeeeee;
+}
+
+.extra-advantage h3 {
     max-width: 160px;
 }
 
@@ -260,17 +265,12 @@ input[type="checkbox"].visually-hidden{
     max-width: 305px;
 }
 
-.advantage-item:nth-of-type(n+3) .advantage-item-description {
-    color: #000000;
-    background-color: #eeeeee;
-}
-
 .advantage-item-info {
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
     margin-top: auto;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
     text-align: center;
 }
 
