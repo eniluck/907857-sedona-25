@@ -8,9 +8,6 @@ ToDO: Проверить как выглядят странички в IE, Chrom
     Todo: посмотреть почему появляется полоска в интро. Скорее всего по каким то параметрам background
     https://clip2net.com/s/421g55h
 */
-/*
-    Todo: Пропустить файл через автопрефиксер
-*/
 body {
     margin: 0;
     padding: 0;
@@ -226,26 +223,17 @@ input[type="checkbox"].visually-hidden {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     min-width: 400px;
-    min-height: 256px;
-    position: relative;
     color: #ffffff;
     text-align: center;
     background-color: #81b3d2;
     padding-top: 49px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     justify-content: space-between;
 }
 
-.advantage-item-description::after {
+.advantage-item-description p::before {
     display: block;
     width: 100%;
     counter-increment: block-number;
@@ -254,18 +242,18 @@ input[type="checkbox"].visually-hidden {
     font-size: 14px;
     line-height: 21px;
     position: absolute;
-    top: 48%;
+    top: -43px;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 
 .advantage-item-description h3 {
     margin: 0 auto;
     font-size: 21px;
     line-height: 21px;
-    margin-bottom: auto;
+    margin-bottom: 66px;
 }
 
 .main-advantage h3{
@@ -294,10 +282,11 @@ input[type="checkbox"].visually-hidden {
 }
 
 .advantage-item-info {
+    position: relative;
     font-weight: 400;
     font-size: 14px;
     line-height: 21px;
-    margin-top: auto;
+    margin: 0 auto;
     margin-bottom: 57px;
     text-align: center;
 }
@@ -767,7 +756,6 @@ input[type="checkbox"].visually-hidden {
 .column-cost {
     margin-left: auto;
 }
-
 
 /*стили range фильтра с двумя кнопками*/
 .column-cost legend{
