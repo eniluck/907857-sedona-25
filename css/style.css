@@ -188,8 +188,8 @@ input[type="checkbox"].visually-hidden {
     right: 0;
     background-image: url("../img/intro-polygon.svg");
     background-repeat:  no-repeat;
-    background-position: 0px 2px;
-    height: 59px;
+    background-position: 0px 0px;
+    height: 57px;
 }
 
 .intro img {
