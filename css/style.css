@@ -214,7 +214,7 @@ input[type="checkbox"].visually-hidden{
     color: #ffffff;
     text-align: center;
     background-color: #81b3d2;
-    padding-top: 47px;
+    padding-top: 49px;
 }
 
 .advantage-item-description {
@@ -261,6 +261,10 @@ input[type="checkbox"].visually-hidden{
     max-width: 255px;
 }
 
+.advantage-item:nth-last-child(2) .advantage-item-info  {
+    max-width: 265px;
+}
+
 .main-advantage .advantage-item-info {
     max-width: 305px;
 }
@@ -270,7 +274,7 @@ input[type="checkbox"].visually-hidden{
     font-size: 14px;
     line-height: 21px;
     margin-top: auto;
-    margin-bottom: 60px;
+    margin-bottom: 57px;
     text-align: center;
 }
 
