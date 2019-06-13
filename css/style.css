@@ -37,7 +37,7 @@ img {
 }
 
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden{
+input[type="checkbox"].visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -647,11 +647,11 @@ input[type="checkbox"].visually-hidden{
     padding-left: 40px;
 }
 
-.search-input:focus + label{
+.search-input:focus + label {
     outline: 1px solid #1c4f80;
 }
 
-.search-input + label::before{
+.search-input + label::before {
     content:"";
     display: block;
     position: absolute;
@@ -668,7 +668,7 @@ input[type="checkbox"].visually-hidden{
 }
 
 .search-input:disabled + label::before {
-    background-image: url("../img/checkbox-off-disabled.svg");    
+    background-image: url("../img/checkbox-off-disabled.svg"); 
     color: #6a6a6a;
 }
 
@@ -677,7 +677,7 @@ input[type="checkbox"].visually-hidden{
 }
 
 .search-input:checked:disabled + label::before {
-    background-image: url("../img/checkbox-on-disabled.svg");    
+    background-image: url("../img/checkbox-on-disabled.svg"); 
 }
 
 .search-input-number {
@@ -733,7 +733,6 @@ input[type="checkbox"].visually-hidden{
     font-size: 16px;
     line-height: 21px;
 }
-
 
 .price-controls {
     position: relative;
@@ -1062,7 +1061,7 @@ input[type="checkbox"].visually-hidden{
     background-color: #f2f2f2;
     padding-left: 16px;
     padding-right: 12px;
-    margin: 0;   
+    margin: 0;
     margin-top: 48px;
     font-weight: 400px;
 }
@@ -1109,8 +1108,8 @@ input[type="checkbox"].visually-hidden{
     margin-right: auto;
 }
 
-.hotel-search-item.search-children label{
-    margin-left: 48px;    
+.hotel-search-item.search-children label {
+    margin-left: 48px;
 }
 
 .appartment-item-image {
