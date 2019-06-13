@@ -213,6 +213,7 @@ input[type="checkbox"].visually-hidden {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    background-color: #eeeeee;
 }
 
 .advantage-item {
