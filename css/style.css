@@ -194,7 +194,7 @@ input[type="checkbox"].visually-hidden {
 
 .intro img {
     margin-top: 76px;
-    margin-bottom: 71px;
+    margin-bottom: 72px;
 }
 
 /*---------- advantages----------*/
@@ -297,6 +297,7 @@ input[type="checkbox"].visually-hidden {
     display: flex;
     min-width: 400px;
     min-height: 330px;
+    background-color: #ffffff;
 }
 
 .city-advantage-item {
