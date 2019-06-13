@@ -110,6 +110,7 @@ input[type="checkbox"].visually-hidden {
     position: absolute;
     left: calc(50% - 140px/2);
     top: 0;
+    z-index: 1;
 }
 
 .site-navigation {
@@ -231,9 +232,6 @@ input[type="checkbox"].visually-hidden {
     text-align: center;
     background-color: #81b3d2;
     padding-top: 49px;
-}
-
-.advantage-item-description {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -244,6 +242,7 @@ input[type="checkbox"].visually-hidden {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    justify-content: space-between;
 }
 
 .advantage-item-description::after {
@@ -266,6 +265,7 @@ input[type="checkbox"].visually-hidden {
     margin: 0 auto;
     font-size: 21px;
     line-height: 21px;
+    margin-bottom: auto;
 }
 
 .main-advantage h3{
@@ -609,7 +609,7 @@ input[type="checkbox"].visually-hidden {
 }   
 
 .hotel-search-button-find:active {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.3);
     background-color: #5496bd;
 }
 
@@ -951,7 +951,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .result-sort-item:not(.active) a:not(:active) {
-    border-bottom: 1px dashed #81b3d2;
+    border-bottom: 1px dotted #81b3d2;
 }
 
 .result-sort-item a {
