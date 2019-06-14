@@ -168,18 +168,20 @@ input[type="checkbox"].visually-hidden {
     text-align: center;
     margin-bottom: 60px;
     position: relative;
+    overflow: hidden;
 }
 
 .intro::after {
     content: "";
     position: absolute;
     bottom: -2px;
-    left: 0;
-    right: 0;
+    left: 0px;
+    right: 0px;
     background-image: url("../img/intro-polygon.svg");
     background-repeat:  no-repeat;
     background-position: 0px 0px;
-    height: 57px;
+    height: 59px;
+    width: 1200px;
 }
 
 .intro img {
