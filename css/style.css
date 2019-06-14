@@ -173,7 +173,7 @@ input[type="checkbox"].visually-hidden {
 .intro::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     right: 0;
     background-image: url("../img/intro-polygon.svg");
