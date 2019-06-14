@@ -44,7 +44,7 @@ input[type="checkbox"].visually-hidden {
 
 .background-container {
     position: relative;
-    width: 1200px; 
+    width: 1200px;
     margin: 0 auto;
     -webkit-box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
             box-shadow: 0px 5px 15px 0px rgba(0, 1, 1, 0.2);
@@ -83,7 +83,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 /*---------- Navigation ----------*/
-.site-header{
+.site-header {
     background-color: #ffffff;
 }
 
@@ -248,7 +248,7 @@ input[type="checkbox"].visually-hidden {
     margin-bottom: 66px;
 }
 
-.main-advantage h3{
+.main-advantage h3 {
     max-width: 151px;
 }
 
@@ -463,11 +463,11 @@ input[type="checkbox"].visually-hidden {
     background-color: #669ec0;
 }
 
-.social-button:active path{
+.social-button:active path {
     background-color: #5496bd;
 }
 
-.social-button:active path{
+.social-button:active path {
     fill: #5496bd;
 }
 
@@ -488,7 +488,6 @@ input[type="checkbox"].visually-hidden {
     fill: #bdbbbc;
 }
 
-
 /*---------- hotel-search ----------*/
 .hotel-search-form {
     text-align: center;
@@ -501,7 +500,6 @@ input[type="checkbox"].visually-hidden {
 .search-dates input{
     padding: 0 10px;
 }
-
 
 .search-form-field {
     -webkit-box-sizing: border-box;
@@ -701,7 +699,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .search-input:disabled + label::before {
-    background-image: url("../img/checkbox-off-disabled.svg"); 
+    background-image: url("../img/checkbox-off-disabled.svg");
     color: #6a6a6a;
 }
 
@@ -710,7 +708,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .search-input:checked:disabled + label::before {
-    background-image: url("../img/checkbox-on-disabled.svg"); 
+    background-image: url("../img/checkbox-on-disabled.svg");
 }
 
 .search-input-number {
@@ -751,7 +749,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 /*стили range фильтра с двумя кнопками*/
-.column-cost legend{
+.column-cost legend {
     margin-bottom: 10px;
 }
 
@@ -1254,11 +1252,11 @@ input[type="checkbox"].visually-hidden {
                 transform: translateX(0);
     }
     10%, 30%, 50%, 70%, 90% { 
-        -webkit-transform: translateX(-10px); 
+        -webkit-transform: translateX(-10px);
                 transform: translateX(-10px);
     }
     20%, 40%, 60%, 80% { 
-        -webkit-transform: translateX(10px); 
+        -webkit-transform: translateX(10px);
                 transform: translateX(10px);
     }
 }
@@ -1269,11 +1267,11 @@ input[type="checkbox"].visually-hidden {
                 transform: translateX(0);
     }
     10%, 30%, 50%, 70%, 90% { 
-        -webkit-transform: translateX(-10px); 
+        -webkit-transform: translateX(-10px);
                 transform: translateX(-10px);
     }
     20%, 40%, 60%, 80% { 
-        -webkit-transform: translateX(10px); 
+        -webkit-transform: translateX(10px);
                 transform: translateX(10px);
     }
 }
